@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useLayoutEffect } from 'react'
+import { useAppDispatch } from './services/store'
+import { getUser } from './services/store/user/actions'
+import ProjectList from './components/project-list/ProjectList'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const dispatch = useAppDispatch()
+
+    useLayoutEffect(() => {
+        dispatch(getUser())
+    }, [dispatch])
+
+    return (
+        <div className='App'>
+            <ProjectList />
+        </div>
+    )
 }
 
-export default App;
+export default App

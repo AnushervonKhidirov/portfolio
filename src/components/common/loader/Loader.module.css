@@ -1,0 +1,62 @@
+.loader {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1em);
+    grid-template-rows: repeat(3, 1em);
+    justify-content: center;
+    align-content: center;
+    gap: 0.5em;
+}
+
+.loader div {
+    background: #000;
+    border-radius: 100%;
+    animation: loader_anim 1.2s linear infinite;
+}
+
+.loader div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: -0.4s;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: -0.8s;
+}
+
+.loader div:nth-child(4) {
+    animation-delay: -0.4s;
+}
+
+.loader div:nth-child(5) {
+    animation-delay: -0.8s;
+}
+
+.loader div:nth-child(6) {
+    animation-delay: -1.2s;
+}
+
+.loader div:nth-child(7) {
+    animation-delay: -0.8s;
+}
+
+.loader div:nth-child(8) {
+    animation-delay: -1.2s;
+}
+
+.loader div:nth-child(9) {
+    animation-delay: -1.6s;
+}
+
+@keyframes loader_anim {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
