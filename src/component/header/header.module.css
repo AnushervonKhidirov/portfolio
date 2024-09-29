@@ -1,5 +1,4 @@
-.header {
+.header_block {
     display: grid;
     justify-items: end;
-    padding: 2rem 5rem;
 }
