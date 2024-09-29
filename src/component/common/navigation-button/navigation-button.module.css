@@ -1,0 +1,13 @@
+.nav_bnt {
+    display: inline-block;
+    padding: 0.5em;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 300;
+    transition: color 0.5s;
+}
+
+.nav_bnt:hover,
+.nav_bnt.active {
+    color: var(--secondary);
+}
