@@ -55,8 +55,24 @@ h3 {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 426px) and (max-width: 1024px) {
     html {
         font-size: 1vw;
+    }
+}
+
+@media screen and (min-width: 426px) {
+    body {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html {
+        font-size: 1.5vw;
+    }
+
+    body {
+        font-size: 2rem;
     }
 }

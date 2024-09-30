@@ -1,0 +1,13 @@
+.social_links {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: max-content;
+    gap: 1rem;
+}
+
+.social_link {
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem solid var(--secondary);
+    border-radius: 100%;
+}

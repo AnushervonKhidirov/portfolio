@@ -1,0 +1,25 @@
+.avatar {
+    --size: 30rem;
+    --border-width: 0.15rem;
+    --shadow-size: calc(var(--size) / 7);
+
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    border-top: var(--border-width) solid transparent;
+    border-bottom: var(--border-width) solid transparent;
+    border-left: var(--border-width) solid var(--secondary);
+    border-right: var(--border-width) solid var(--secondary);
+    border-radius: 100%;
+}
+
+.image {
+    position: absolute;
+    inset: 5%;
+    border: var(--border-width) solid var(--secondary);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 var(--shadow-size) var(--shadow-size) var(--primary);
+    background-position: center;
+    border-radius: 100%;
+}

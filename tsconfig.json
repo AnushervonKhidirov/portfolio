@@ -18,12 +18,13 @@
             }
         ],
         "paths": {
-            "@component/*": ["./src/component/*"],
             "@common/*": ["./src/component/common/*"],
+            "@component/*": ["./src/component/*"],
             "@store/*": ["./src/service/store/*"],
             "@constant/*": ["./src/utils/constant/*"],
             "@helper/*": ["./src/utils/helper/*"],
             "@type/*": ["./src/utils/type/*"],
+            "@images/*": ["./public/assets/images/*"],
             "@/*": ["./src/*"]
         }
     },
