@@ -16,7 +16,7 @@
 }
 
 .social_link:hover {
-    border-color: #fff;
+    border-color: var(--tertiary);
 }
 
 .social_link > svg {
@@ -25,5 +25,5 @@
 }
 
 .social_link:hover > svg {
-    fill: #fff;
+    fill: var(--tertiary);
 }

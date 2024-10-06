@@ -1,7 +1,7 @@
 :root {
-    --primary: #081b29;
-    --secondary: #00abf0;
-    --tertiary: #122e43;
+    --primary: #181631;
+    --secondary: #a45cff;
+    --tertiary: #cb7096;
 
     --padding-inline: 7rem;
 }
@@ -13,14 +13,14 @@
 }
 
 body {
-    background-color: var(--primary);
-    color: white;
+    display: grid;
     width: 100vw;
     min-height: 100vh;
-    overflow: hidden;
-    display: grid;
     grid-template-areas: 'header' 'main';
     grid-template-rows: max-content 1fr;
+    background-color: var(--primary);
+    color: white;
+    overflow: hidden;
 }
 
 header {
@@ -28,6 +28,7 @@ header {
 }
 
 main {
+    display: grid;
     grid-area: main;
 }
 
@@ -45,7 +46,7 @@ h2 {
     font-weight: 500;
 }
 h3 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 500;
 }
 
@@ -63,7 +64,7 @@ h3 {
 
 @media screen and (min-width: 426px) {
     body {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 }
 

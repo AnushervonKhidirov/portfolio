@@ -1,3 +1,11 @@
+.introduction {
+    display: grid;
+    height: 100%;
+    align-content: space-evenly;
+    gap: 3rem;
+}
+
 .position {
     color: var(--secondary);
+    margin-bottom: 1.5rem;
 }

@@ -1,9 +1,6 @@
 import type { TSocialLinkList } from '@type/social-links'
 
-import GitHubIcon from '@component/icon/github-icon'
-import LinkedInIcon from '@component/icon/linkedin-icon'
-import LeetCodeIcon from '@component/icon/leetcode-icon'
-import RoadmapIcon from '@component/icon/roadmap-icon'
+import { GitHubIcon, LinkedInIcon, LeetCodeIcon, RoadmapIcon } from '@component/svg'
 
 export const socialLinks: TSocialLinkList['list'] = [
     {

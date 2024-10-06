@@ -1,0 +1,28 @@
+.wrapper {
+    display: grid;
+    gap: 5rem;
+}
+
+.introduction {
+    grid-area: introduction;
+}
+
+.image {
+    grid-area: image;
+}
+
+@media screen and (min-width: 426px) {
+    .wrapper {
+        grid-template-areas: 'introduction image';
+        grid-template-columns: 1fr 1fr;
+        align-content: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .wrapper {
+        grid-template-areas: 'image' 'introduction';
+        grid-template-rows: max-content max-content;
+        align-content: space-evenly;
+    }
+}

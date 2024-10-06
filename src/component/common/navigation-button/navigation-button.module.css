@@ -7,7 +7,10 @@
     transition: color 0.5s;
 }
 
-.nav_bnt:hover,
 .nav_bnt.active {
     color: var(--secondary);
+}
+
+.nav_bnt:not(.active):hover {
+    color: var(--tertiary);
 }
