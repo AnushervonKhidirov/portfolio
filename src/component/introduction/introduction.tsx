@@ -1,13 +1,15 @@
 import type { FC } from 'react'
 import type { TIntroduction } from '@type/introduction'
+import type { TypeWithHTMLAttr } from '@type/common'
 
 import SocialLinks from '@common/social-links/social-links'
 
+import classNames from 'classnames'
 import classes from './introduction.module.css'
 
-const Introduction: FC<TIntroduction> = ({ name, position, about, socialLinks }) => {
+const Introduction: FC<TypeWithHTMLAttr<TIntroduction>> = ({ name, position, about, socialLinks, className }) => {
     return (
-        <div className={classes.introduction}>
+        <div className={classNames(classes.introduction, className)}>
             <div>
                 <h1 className={classes.name}>Hi, I'm {name}</h1>
                 <h3 className={classes.position}>{position}</h3>

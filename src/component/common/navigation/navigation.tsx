@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import type { TypeWithHTMLAttr } from '@type/common'
 import type { TNavigationList } from '@type/navigation'
 
 import NavigationButton from '../navigation-button/navigation-button'
@@ -6,7 +7,7 @@ import NavigationButton from '../navigation-button/navigation-button'
 import classNames from 'classnames'
 import classes from './navigation.module.css'
 
-const Navigation: FC<TNavigationList> = ({ list, className }) => {
+const Navigation: FC<TypeWithHTMLAttr<TNavigationList>> = ({ list, className }) => {
     return (
         <nav className={classNames(classes.navigation, className)}>
             {list.map(({ href, title }) => (

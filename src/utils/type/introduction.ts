@@ -5,5 +5,4 @@ export type TIntroduction = {
     position: string
     about: string
     socialLinks: TSocialLinkList['list']
-    className?: string
 }
