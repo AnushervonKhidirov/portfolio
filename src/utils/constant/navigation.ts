@@ -10,6 +10,10 @@ export const navigationItems: TNavigationList['list'] = [
         title: 'About',
     },
     {
+        href: '/experience',
+        title: 'Experience',
+    },
+    {
         href: '/projects',
         title: 'Projects',
     },
