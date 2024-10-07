@@ -1,6 +1,6 @@
 .avatar {
     --size: 30rem;
-    --border-width: 0.15rem;
+    --border-width: var(--thin-line-vide);
     --shadow-size: calc(var(--size) / 7);
 
     position: relative;

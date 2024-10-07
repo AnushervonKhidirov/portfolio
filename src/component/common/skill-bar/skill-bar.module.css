@@ -1,0 +1,16 @@
+.skill_bar {
+    display: grid;
+    grid-template-areas: 'name . progress' 'progress_bar progress_bar progress_bar';
+    grid-template-columns: max-content 1fr max-content;
+    gap: 0.5rem;
+}
+
+.name {
+    grid-area: name;
+}
+.progress {
+    grid-area: progress;
+}
+.progress_bar {
+    grid-area: progress_bar;
+}

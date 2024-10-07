@@ -1,0 +1,16 @@
+.progress_bar {
+    --padding-size: 0.3rem;
+    --radius-size: 0.6rem;
+
+    height: 2rem;
+    border: var(--thin-line-vide) solid var(--secondary);
+    border-radius: var(--radius-size);
+    overflow: hidden;
+    padding: var(--padding-size);
+}
+
+.progress_line {
+    height: 100%;
+    background-color: var(--tertiary);
+    border-radius: calc(var(--radius-size) - var(--padding-size));
+}
