@@ -5,6 +5,8 @@
 
     --padding-inline: 7rem;
     --thin-line-vide: 0.15rem;
+
+    --border-radius-small: 0.6rem;
 }
 
 * {
