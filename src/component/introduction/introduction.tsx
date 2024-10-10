@@ -15,7 +15,7 @@ const Introduction: FC<TypeWithHTMLAttr<TIntroduction>> = ({ name, position, abo
                 <h3 className={classes.position}>{position}</h3>
                 <div className={classes.about}>{about}</div>
             </div>
-            <SocialLinks className={classes.social} list={socialLinks} />
+            <SocialLinks className={classes.social} socialLinks={socialLinks} />
         </div>
     )
 }

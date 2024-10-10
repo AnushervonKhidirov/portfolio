@@ -4,5 +4,5 @@ export type TNavigationItem = {
 }
 
 export type TNavigationList = {
-    list: TNavigationItem[]
+    navigationLinks: TNavigationItem[]
 }

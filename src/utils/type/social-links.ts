@@ -5,5 +5,5 @@ export type TSocialLink = {
 }
 
 export type TSocialLinkList = {
-    list: TSocialLink[]
+    socialLinks: TSocialLink[]
 }

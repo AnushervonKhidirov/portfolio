@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header>
             <BlockWrapper className={classes.header_block}>
-                <Navigation list={navigationItems} />
+                <Navigation navigationLinks={navigationItems} />
             </BlockWrapper>
         </header>
     )

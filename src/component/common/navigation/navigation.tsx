@@ -7,10 +7,10 @@ import NavigationButton from '../navigation-button/navigation-button'
 import classNames from 'classnames'
 import classes from './navigation.module.css'
 
-const Navigation: FC<TypeWithHTMLAttr<TNavigationList>> = ({ list, className }) => {
+const Navigation: FC<TypeWithHTMLAttr<TNavigationList>> = ({ navigationLinks, className }) => {
     return (
         <nav className={classNames(classes.navigation, className)}>
-            {list.map(({ href, title }) => (
+            {navigationLinks.map(({ href, title }) => (
                 <NavigationButton href={href} title={title} key={href} />
             ))}
         </nav>
