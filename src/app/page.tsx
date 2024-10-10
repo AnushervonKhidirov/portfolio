@@ -17,7 +17,7 @@ const HomePage = () => {
     }
 
     return (
-        <BlockWrapper className={classes.wrapper} fullHeight>
+        <BlockWrapper className={classes.home_page_wrapper} fullHeight>
             <Introduction className={classes.introduction} {...introductionData} />
             <LaptopImage className={classes.image} />
         </BlockWrapper>

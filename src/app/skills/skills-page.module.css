@@ -1,0 +1,6 @@
+.skill_page_wrapper {
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
