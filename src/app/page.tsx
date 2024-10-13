@@ -1,27 +1,18 @@
-import type { TIntroduction } from '@type/introduction'
+'use client'
+import SimpleBar from 'simplebar-react'
 
-import BlockWrapper from '@common/block-wrapper/block-wrapper'
-import Introduction from '@component/introduction/introduction'
+import IntroductionSection from '@component/sections/introduction/introduction-section'
+import SkillsSection from '@component/sections/skills/skills-section'
 
-import { LaptopImage } from '@component/svg'
+import 'simplebar-react/dist/simplebar.min.css'
 
-import { socialLinks } from '@constant/social-links'
-import classes from './/home-page.module.css'
-
-const HomePage = () => {
-    const introductionData: TIntroduction = {
-        name: 'Anushervon',
-        position: 'Front-End Developer',
-        about: 'I am a punctual and sociable front-end developer who likes working in a team, learning new technologies and improving skills. While working with the code, I am trying to write readable code and keeping it up to date.',
-        socialLinks: socialLinks,
-    }
-
+const Page = () => {
     return (
-        <BlockWrapper className={classes.home_page_wrapper} fullHeight>
-            <Introduction className={classes.introduction} {...introductionData} />
-            <LaptopImage className={classes.image} />
-        </BlockWrapper>
+        <SimpleBar forceVisible="y" style={{ height: '100vh' }}>
+            <IntroductionSection />
+            <SkillsSection />
+        </SimpleBar>
     )
 }
 
-export default HomePage
+export default Page

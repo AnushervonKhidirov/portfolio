@@ -1,6 +1,6 @@
 import type { TNavigationList } from '@type/navigation'
 
-export const navigationItems: TNavigationList['navigationLinks'] = [
+export const navigationList: TNavigationList['navigationLinks'] = [
     {
         href: '/',
         title: 'Home',

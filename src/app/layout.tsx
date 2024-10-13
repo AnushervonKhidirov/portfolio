@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 
 import localFonts from 'next/font/local'
-import Header from '@component/header/header'
+
+import Navigation from '@common/navigation/navigation'
+
+import { navigationList } from '@constant/navigation'
 
 import './globals.css'
 
@@ -52,8 +55,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={font.className}>
-                <Header />
                 <main>{children}</main>
+                <Navigation navigationLinks={navigationList} />
             </body>
         </html>
     )

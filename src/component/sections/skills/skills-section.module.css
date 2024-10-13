@@ -1,0 +1,11 @@
+.skill_section {
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 4rem;
+}
+
+@media screen and (min-width: 769px) {
+    .skill_section {
+        grid-template-columns: 1fr 1fr;
+    }
+}

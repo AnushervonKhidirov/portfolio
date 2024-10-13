@@ -1,17 +1,17 @@
-import BlockWrapper from '@common/block-wrapper/block-wrapper'
+import Section from '@common/section/section'
 import SkillList from '@common/skill-list/skill-list'
 
 import { frontEndSkills, backEndSkills } from './constant'
 
-import classes from './skills-page.module.css'
+import classes from './skills-section.module.css'
 
-const SkillsPage = () => {
+const SkillsSection = () => {
     return (
-        <BlockWrapper className={classes.skill_page_wrapper} fullHeight>
+        <Section title="Skills" className={classes.skill_section}>
             <SkillList headline="Front-End skills" skills={frontEndSkills} />
             <SkillList headline="Back-End skills" skills={backEndSkills} />
-        </BlockWrapper>
+        </Section>
     )
 }
 
-export default SkillsPage
+export default SkillsSection

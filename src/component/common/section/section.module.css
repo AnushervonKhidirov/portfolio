@@ -4,7 +4,7 @@
 }
 
 .fullHeight {
-    height: 100%;
+    height: 100vh;
 }
 
 @media screen and (min-width: 1025px) {
