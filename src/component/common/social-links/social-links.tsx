@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { TypeWithHTMLAttr } from '@type/common'
+import type { AdditionalProps } from '@type/common'
 import type { TSocialLinkList } from '@type/social-links'
 
 import Link from 'next/link'
@@ -8,7 +8,7 @@ import { Tooltip } from '@mui/material'
 import classNames from 'classnames'
 import classes from './social-links.module.css'
 
-const SocialLinks: FC<TypeWithHTMLAttr<TSocialLinkList>> = ({ socialLinks, className }) => {
+const SocialLinks: FC<AdditionalProps<TSocialLinkList>> = ({ socialLinks, className }) => {
     return (
         <div className={classNames(classes.social_links, className)}>
             {socialLinks.map(({ title, href, Icon }) => (

@@ -1,6 +1,9 @@
-import { HTMLAttributes } from 'react'
+import { PropsWithChildren } from 'react'
 
-export type TypeWithHTMLAttr<T> = T & HTMLAttributes<HTMLElement>
+export type AdditionalProps<T> = T &
+    PropsWithChildren & {
+        className?: string
+    }
 
 export enum Position {
     FrontEnd = 'Front-End',

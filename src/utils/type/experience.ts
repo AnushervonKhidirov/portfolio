@@ -1,9 +1,12 @@
 export type TExperience = {
     name: string
     position: string
-    date: {
+    dates: {
         from: Date
         to: Date
     }
-    companyRating: number
+    tasks: string[]
+    stack: string[]
+    about?: string
+    rating?: number
 }

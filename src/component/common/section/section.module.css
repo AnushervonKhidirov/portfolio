@@ -1,6 +1,29 @@
 .section {
-    padding-inline: var(--padding-inline);
+    display: grid;
+    align-content: center;
+}
+
+.section_inner {
+    display: grid;
+    gap: 3rem;
     margin: auto;
+    padding-inline: var(--padding-inline);
+}
+
+.headline {
+    position: relative;
+    justify-self: self-start;
+    line-height: 1.5;
+}
+
+.headline::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0.05em;
+    background-color: var(--secondary);
 }
 
 .fullHeight {
@@ -8,14 +31,14 @@
 }
 
 @media screen and (min-width: 1025px) {
-    .section {
+    .section_inner {
         width: 85vw;
         min-width: 1024px;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .section {
+    .section_inner {
         width: 100%;
     }
 }

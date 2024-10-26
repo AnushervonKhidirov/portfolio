@@ -9,7 +9,7 @@ import classes from './skills-section.module.css'
 
 const SkillsSection = () => {
     return (
-        <Section title="Skills" className={classes.skill_section}>
+        <Section title="Skills" headline className={classes.skill_section}>
             <SkillList headline={Position.FrontEnd} skills={frontEndSkills} />
             <SkillList headline={Position.BackEnd} skills={backEndSkills} />
         </Section>
