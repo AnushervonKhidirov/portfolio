@@ -1,4 +1,5 @@
 import type { TIntroduction } from '@type/introduction'
+import { Position } from '@type/common'
 
 import Section from '@common/section/section'
 import Introduction from '@component/introduction/introduction'
@@ -11,7 +12,7 @@ import classes from './introduction-section.module.css'
 const IntroductionSection = () => {
     const introductionData: TIntroduction = {
         name: 'Anushervon',
-        position: 'Front-End Developer',
+        position: Position.FrontEnd,
         about: 'I am a punctual and sociable front-end developer who likes working in a team, learning new technologies and improving skills. While working with the code, I am trying to write readable code and keeping it up to date.',
         socialLinks: socialLinks,
     }

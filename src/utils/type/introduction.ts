@@ -4,5 +4,5 @@ export type TIntroduction = {
     name: string
     position: string
     about: string
-    socialLinks: TSocialLinkList['list']
+    socialLinks: TSocialLinkList['socialLinks']
 }
