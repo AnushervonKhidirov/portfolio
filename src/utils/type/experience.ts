@@ -1,12 +1,12 @@
+import type { TDateRange } from './common'
+
 export type TExperience = {
     name: string
+    link?: string
+    country?: string
     position: string
-    dates: {
-        from: Date
-        to: Date
-    }
+    dates: TDateRange
+    about?: string
     tasks: string[]
     stack: string[]
-    about?: string
-    rating?: number
 }

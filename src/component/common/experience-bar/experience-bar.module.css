@@ -1,4 +1,12 @@
 .experience {
     display: grid;
-    gap: 0.5em;
+    gap: 1.5rem;
+}
+
+.link {
+    transition: color var(--transition-duration);
+}
+
+.link:hover {
+    color: var(--tertiary);
 }

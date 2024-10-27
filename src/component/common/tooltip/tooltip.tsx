@@ -1,0 +1,28 @@
+import type { FC } from 'react'
+import type { TooltipProps } from '@mui/material'
+
+import { Tooltip as MuiTooltip, tooltipClasses } from '@mui/material'
+
+const Tooltip: FC<TooltipProps> = props => {
+    return (
+        <MuiTooltip
+            {...props}
+            slotProps={{
+                popper: {
+                    sx: {
+                        [`&.${tooltipClasses.popper}[data-popper-placement*="bottom"] .${tooltipClasses.tooltip}`]: {
+                            marginTop: '0.5em',
+                        },
+                    },
+                },
+                tooltip: {
+                    sx: {
+                        fontSize: '1.25rem',
+                    },
+                },
+            }}
+        ></MuiTooltip>
+    )
+}
+
+export default Tooltip

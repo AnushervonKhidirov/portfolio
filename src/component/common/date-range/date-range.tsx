@@ -1,21 +1,24 @@
 import type { FC } from 'react'
+import type { AdditionalProps } from '@type/common'
 
-import classes from './experience-dates.module.css'
+import classNames from 'classnames'
+import classes from './date-range.module.css'
 
-const ExperienceDates: FC<{ dates: { from: Date; to: Date } }> = ({ dates }) => {
+const DateRange: FC<AdditionalProps<{ dates: { from: Date; to?: Date } }>> = ({ dates, className }) => {
     const dateFromText = dates.from.toLocaleString('default', { month: 'short', year: 'numeric' })
-    const dateToText = dates.to.toLocaleString('default', { month: 'short', year: 'numeric' })
-    const duration = getDurationText(getExperienceDuration(dates))
+    const dateToText = dates.to ? dates.to.toLocaleString('default', { month: 'short', year: 'numeric' }) : 'Now'
 
-    function getExperienceDuration(dates: { from: Date; to: Date }) {
+    const duration = getDurationText(getRangeDuration(dates))
+
+    function getRangeDuration(dates: { from: Date; to?: Date }) {
         const from = {
             year: dates.from.getFullYear(),
             month: dates.from.getMonth(),
         }
 
         const to = {
-            year: dates.to.getFullYear(),
-            month: dates.to.getMonth(),
+            year: dates.to ? dates.to.getFullYear() : new Date().getFullYear(),
+            month: dates.to ? dates.to.getMonth() : new Date().getMonth(),
         }
 
         let years = to.year - from.year
@@ -36,10 +39,10 @@ const ExperienceDates: FC<{ dates: { from: Date; to: Date } }> = ({ dates }) => 
     }
 
     return (
-        <div className={classes.dates}>
-            {dateFromText} — {dateToText} ({duration})
+        <div className={classNames(classes.date_range, className)}>
+            {dateFromText} - {dateToText} ({duration})
         </div>
     )
 }
 
-export default ExperienceDates
+export default DateRange
