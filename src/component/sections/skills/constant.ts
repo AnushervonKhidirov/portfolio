@@ -1,6 +1,6 @@
-import type { TSkillList } from '@type/skill'
+import type { TSkill } from '@type/skill'
 
-export const frontEndSkills: TSkillList['skills'] = [
+export const frontEndSkills: TSkill[] = [
     {
         name: 'HTML',
         progress: 100,
@@ -27,7 +27,7 @@ export const frontEndSkills: TSkillList['skills'] = [
     },
 ]
 
-export const backEndSkills: TSkillList['skills'] = [
+export const backEndSkills: TSkill[] = [
     {
         name: 'NodeJs',
         progress: 40,
@@ -42,7 +42,7 @@ export const backEndSkills: TSkillList['skills'] = [
     },
 ]
 
-export const softSkills: TSkillList['skills'] = [
+export const softSkills: TSkill[] = [
     {
         name: 'Communication',
         progress: 85,

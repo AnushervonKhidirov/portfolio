@@ -1,8 +1,8 @@
-import type { TSocialLinkList } from '@type/social-links'
+import type { TSocialLink } from '@type/social-links'
 
 import { GitHubIcon, LinkedInIcon, LeetCodeIcon, RoadmapIcon } from '@component/svg'
 
-export const socialLinks: TSocialLinkList['socialLinks'] = [
+export const socialLinks: TSocialLink[] = [
     {
         title: 'GitHub',
         href: 'https://github.com/AnushervonKhidirov',
