@@ -1,6 +1,5 @@
 import type { FC } from 'react'
-import type { TExperience } from '@type/experience'
-import type { TDateRange } from '@type/common'
+import type { TOrganization, THeadline } from '@type/organization'
 
 import Link from 'next/link'
 import Tooltip from '@common/tooltip/tooltip'
@@ -9,20 +8,12 @@ import About from '@common/about/about'
 import Tasks from '@common/tasks/tasks'
 import Stack from '@common/stack/stack'
 
-import classes from './experience-bar.module.css'
+import classes from './organization-block.module.css'
 import classNames from 'classnames'
 
-type THeadline = {
-    name: string
-    link?: string
-    position: string
-    dates: TDateRange
-    country?: string
-}
-
-const ExperienceBar: FC<TExperience> = ({ name, link, country, position, dates, about, tasks, stack }) => {
+const OrganizationBlock: FC<TOrganization> = ({ name, link, country, position, dates, about, tasks, stack }) => {
     return (
-        <div className={classes.experience}>
+        <div className={classes.organization}>
             <Headline name={name} link={link} position={position} dates={dates} country={country} />
             {about && <About about={about} />}
             <Tasks list={tasks} />
@@ -52,4 +43,4 @@ const Headline: FC<THeadline> = ({ name, link, country, position, dates }) => {
     )
 }
 
-export default ExperienceBar
+export default OrganizationBlock

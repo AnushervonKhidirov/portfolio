@@ -1,6 +1,6 @@
 import type { TDateRange } from './common'
 
-export type TExperience = {
+export type TOrganization = {
     name: string
     link?: string
     country?: string
@@ -10,3 +10,5 @@ export type TExperience = {
     tasks: string[]
     stack: string[]
 }
+
+export type THeadline = Omit<TOrganization, 'about' | 'tasks' | 'stack'>

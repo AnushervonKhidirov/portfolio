@@ -1,11 +1,11 @@
-import type { TExperience } from '@type/experience'
+import type { TOrganization } from '@type/organization'
 
 import Section from '@common/section/section'
-import ExperienceBar from '@common/experience-bar/experience-bar'
+import OrganizationBlock from '@common/organization-block/organization-block'
 import { Position } from '@type/common'
 
 const ExperienceSection = () => {
-    const experiences: TExperience[] = [
+    const experiences: TOrganization[] = [
         {
             name: 'Contobox',
             link: 'https://www.advertisers.contobox.com/',
@@ -26,7 +26,7 @@ const ExperienceSection = () => {
     return (
         <Section title="Experience" headline>
             {experiences.map(experience => (
-                <ExperienceBar {...experience} key={experience.name} />
+                <OrganizationBlock {...experience} key={experience.name} />
             ))}
         </Section>
     )
