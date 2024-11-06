@@ -11,7 +11,7 @@ const Tooltip: FC<TooltipProps> = props => {
                 popper: {
                     sx: {
                         [`&.${tooltipClasses.popper}[data-popper-placement*="bottom"] .${tooltipClasses.tooltip}`]: {
-                            marginTop: '0.5em',
+                            marginTop: props.followCursor ? '1.5em' : '0.5em',
                         },
                     },
                 },
