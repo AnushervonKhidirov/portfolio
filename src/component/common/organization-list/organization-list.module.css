@@ -1,0 +1,10 @@
+.organization_list {
+    display: grid;
+    gap: 2rem 3rem;
+}
+
+@media screen and (min-width: 426px) {
+    .organization_list {
+        grid-template-columns: 1fr 1fr;
+    }
+}

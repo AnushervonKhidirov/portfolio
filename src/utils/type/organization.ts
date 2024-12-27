@@ -1,5 +1,9 @@
 import type { TDateRange } from './common'
 
+export type TOrganizationList = {
+    list: TOrganization[]
+}
+
 export type TOrganization = {
     name: string
     link?: string
@@ -12,4 +16,4 @@ export type TOrganization = {
     stack: string[]
 }
 
-export type THeadline = Omit<TOrganization, 'about' | 'tasks' | 'stack'>
+export type THeadline = Omit<TOrganization, 'about' | 'tasks' | 'achievement' | 'stack'>

@@ -19,7 +19,7 @@ const IntroductionSection = () => {
     }
 
     return (
-        <Section title="Introduction" className={classes.introduction_section} fullHeight>
+        <Section title="Introduction" className={classes.introduction_section}>
             <Introduction className={classes.introduction} {...introductionData} />
             <LaptopImage className={classes.image} />
         </Section>

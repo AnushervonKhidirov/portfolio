@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import classes from './section.module.css'
 
 type TSection = AdditionalProps<{
-    title: string
+    title?: string
     headline?: boolean
     fullHeight?: boolean
 }>

@@ -21,9 +21,20 @@
 
 body {
     display: grid;
+    width: 100vw;
     height: 100vh;
+    grid-template-areas: 'header' 'main';
     background-color: var(--primary);
     color: white;
+    overflow: hidden;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
 }
 
 a {
@@ -65,10 +76,6 @@ h4 {
 
 .simplebar-scrollbar.simplebar-visible::before {
     opacity: 1 !important;
-}
-
-div.simplebar-content:before {
-    display: none;
 }
 
 @media screen and (min-width: 1025px) {

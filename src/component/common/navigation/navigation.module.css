@@ -1,13 +1,4 @@
 .navigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background-color: var(--primaryLight);
-    z-index: 9;
-}
-
-.navigation_section {
     display: grid;
     grid-auto-flow: column;
     justify-items: start;

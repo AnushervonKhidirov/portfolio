@@ -2,9 +2,7 @@ import type { Metadata } from 'next'
 
 import localFonts from 'next/font/local'
 
-import Navigation from '@common/navigation/navigation'
-
-import { navigationList } from '@constant/navigation'
+import Header from '@common/header/header'
 
 import './globals.css'
 
@@ -55,7 +53,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={font.className}>
-                <Navigation navigationLinks={navigationList} fixButtonPadding />
+                <Header />
                 <main>{children}</main>
             </body>
         </html>
