@@ -8,6 +8,7 @@ export type TOrganization = {
     dates: TDateRange
     about?: string
     tasks: string[]
+    achievement?: string[]
     stack: string[]
 }
 

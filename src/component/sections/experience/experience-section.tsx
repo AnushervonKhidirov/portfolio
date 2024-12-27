@@ -14,10 +14,17 @@ const ExperienceSection = () => {
             dates: { from: new Date('01/01/2020') },
             about: 'About this company',
             tasks: [
+                'Bug fixing',
+                'Adding new features',
                 'Overwriting old class components to functional components',
                 'Decomposing code',
                 'Optimizing reports page',
                 'Writing filters',
+            ],
+            achievement: [
+                'Teamwork',
+                'Reading old and monolithic code',
+                'Mentoring',
             ],
             stack: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
         },

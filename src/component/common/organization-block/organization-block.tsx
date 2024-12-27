@@ -5,18 +5,29 @@ import Link from 'next/link'
 import Tooltip from '@common/tooltip/tooltip'
 import DateRange from '@common/date-range/date-range'
 import About from '@common/about/about'
-import Tasks from '@common/tasks/tasks'
+import List from '@common/list/list'
 import Stack from '@common/stack/stack'
 
 import classes from './organization-block.module.css'
 import classNames from 'classnames'
 
-const OrganizationBlock: FC<TOrganization> = ({ name, link, country, position, dates, about, tasks, stack }) => {
+const OrganizationBlock: FC<TOrganization> = ({
+    name,
+    link,
+    country,
+    position,
+    dates,
+    about,
+    tasks,
+    achievement,
+    stack,
+}) => {
     return (
         <div className={classes.organization}>
             <Headline name={name} link={link} position={position} dates={dates} country={country} />
             {about && <About about={about} />}
-            <Tasks list={tasks} />
+            <List title="Tasks" list={tasks} />
+            {achievement && <List title="Achievements" list={achievement} />}
             <Stack list={stack} />
         </div>
     )
