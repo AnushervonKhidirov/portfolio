@@ -14,16 +14,16 @@ export const navigationList: TNavigationItem[] = [
         title: 'Experience',
     },
     {
-        href: '/projects',
-        title: 'Projects',
+        href: '/trainings',
+        title: 'Trainings',
     },
     {
         href: '/skills',
         title: 'Skills',
     },
     {
-        href: '/education',
-        title: 'Education',
+        href: '/projects',
+        title: 'Projects',
     },
     {
         href: '/contacts',
