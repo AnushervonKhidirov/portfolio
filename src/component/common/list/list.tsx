@@ -1,9 +1,9 @@
-import classes from './tasks.module.css'
+import classes from './list.module.css'
 
-const Tasks = ({ list }: { list: string[] }) => {
+const List = ({ title, list }: { title: string, list: string[] }) => {
     return (
-        <div className={classes.tasks}>
-            <span>Tasks:</span>
+        <div className={classes.list}>
+            <span>{title}:</span>
             <ul className={classes.task_list}>
                 {list.map(task => (
                     <li className={classes.task} key={task}>
@@ -15,4 +15,4 @@ const Tasks = ({ list }: { list: string[] }) => {
     )
 }
 
-export default Tasks
+export default List
