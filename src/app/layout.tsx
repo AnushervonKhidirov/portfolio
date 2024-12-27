@@ -55,8 +55,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={font.className}>
+                <Navigation navigationLinks={navigationList} fixButtonPadding />
                 <main>{children}</main>
-                <Navigation navigationLinks={navigationList} />
             </body>
         </html>
     )

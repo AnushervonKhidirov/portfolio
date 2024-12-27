@@ -10,7 +10,7 @@ import classNames from 'classnames'
 
 import classes from './navigation-button.module.css'
 
-const NavigationButton: FC<AdditionalProps<TNavigationItem>> = ({ href, title, className }) => {
+const NavigationButton: FC<AdditionalProps<TNavigationItem>> = ({ href, title, fixButtonPadding, className }) => {
     const pathname = usePathname()
 
     function isActive() {
@@ -18,7 +18,15 @@ const NavigationButton: FC<AdditionalProps<TNavigationItem>> = ({ href, title, c
     }
 
     return (
-        <Link className={classNames(classes.nav_bnt, className, { [classes.active]: isActive() })} href={href}>
+        <Link
+            className={classNames(
+                classes.nav_bnt,
+                { [classes.fixPadding]: fixButtonPadding },
+                { [classes.active]: isActive() },
+                className,
+            )}
+            href={href}
+        >
             {title}
         </Link>
     )

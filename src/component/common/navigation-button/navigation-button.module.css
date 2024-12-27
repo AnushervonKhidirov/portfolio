@@ -1,10 +1,14 @@
 .nav_bnt {
     display: inline-block;
-    padding: 0.25em 1em;
     color: #fff;
     font-size: 2rem;
     font-weight: 300;
+    padding: 0.25em 1em;
     transition: color var(--transition-duration);
+}
+
+.nav_bnt.fixPadding:first-child {
+    margin-left: -1em;
 }
 
 .nav_bnt.active {
