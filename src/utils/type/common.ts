@@ -14,3 +14,9 @@ export enum Position {
     FrontEnd = 'Front-End',
     BackEnd = 'Back-End',
 }
+
+export enum Grade {
+    Junior = 'Junior',
+    Middle = 'Middle',
+    Senior = 'Senior',
+}
