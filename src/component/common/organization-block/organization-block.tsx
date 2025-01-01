@@ -39,7 +39,7 @@ const Headline: FC<THeadline> = ({ name, link, country, position, dates }) => {
             <h4>
                 {link ? (
                     <Tooltip title={`Visit ${name}`}>
-                        <Link href={link} className={classNames(classes.name, classes.link)}>
+                        <Link href={link} target="_blank" className={classNames(classes.name, classes.link)}>
                             {name}
                         </Link>
                     </Tooltip>
