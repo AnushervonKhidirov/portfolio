@@ -17,6 +17,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 body {
@@ -24,6 +26,7 @@ body {
     width: 100vw;
     height: 100vh;
     grid-template-areas: 'header' 'main';
+    grid-template-rows: max-content 1fr;
     background-color: var(--primary);
     color: white;
     overflow: hidden;
@@ -31,10 +34,12 @@ body {
 
 header {
     grid-area: header;
+    overflow: hidden;
 }
 
 main {
     grid-area: main;
+    overflow: hidden;
 }
 
 a {
@@ -57,25 +62,6 @@ h3 {
 h4 {
     font-size: 3rem;
     font-weight: 500;
-}
-
-/* scroller */
-.simplebar-content {
-    display: grid;
-    gap: 3em;
-}
-
-.simplebar-track {
-    pointer-events: all !important;
-}
-
-.simplebar-scrollbar:before {
-    background-color: var(--secondary) !important;
-    cursor: pointer !important;
-}
-
-.simplebar-scrollbar.simplebar-visible::before {
-    opacity: 1 !important;
 }
 
 @media screen and (min-width: 1025px) {

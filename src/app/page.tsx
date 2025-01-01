@@ -1,5 +1,5 @@
 'use client'
-import SimpleBar from 'simplebar-react'
+import Scroller from '@common/scroller/scroller'
 
 import IntroductionSection from '@component/sections/introduction/introduction-section'
 import ExperienceSection from '@component/sections/experience/experience-section'
@@ -10,12 +10,12 @@ import 'simplebar-react/dist/simplebar.min.css'
 
 const Page = () => {
     return (
-        <SimpleBar forceVisible="y" style={{ height: '100vh' }}>
+        <Scroller pageScroller>
             <IntroductionSection />
             <ExperienceSection />
             <CoursesSection />
             <SkillsSection />
-        </SimpleBar>
+        </Scroller>
     )
 }
 
