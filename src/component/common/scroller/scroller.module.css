@@ -1,0 +1,38 @@
+.scroller {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: 'content scroller';
+    grid-template-columns: 1fr max-content;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.scroller_content {
+    display: grid;
+    grid-area: content;
+    overflow: auto;
+}
+
+.scroller.page_scroller .scroller_content {
+    gap: 5rem;
+    padding: 5rem 0;
+}
+
+.scroller_line {
+    position: relative;
+    width: 0.5rem;
+    height: 98%;
+    grid-area: scroller;
+    align-self: center;
+    background-color: var(--primaryLight);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.scroller_bar {
+    position: absolute;
+    width: 100%;
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+}
