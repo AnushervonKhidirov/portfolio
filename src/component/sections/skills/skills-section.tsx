@@ -1,17 +1,16 @@
-import { Position } from '@type/common'
+import type { TSkillList } from '@type/skill'
 
 import Section from '@common/section/section'
 import SkillList from '@common/skill-list/skill-list'
 
-import { frontEndSkills, backEndSkills } from './constant'
-
 import classes from './skills-section.module.css'
 
-const SkillsSection = () => {
+const SkillsSection = ({ data }: { data: TSkillList[] }) => {
     return (
         <Section title="Skills" headline className={classes.skill_section}>
-            <SkillList headline={Position.FrontEnd} skills={frontEndSkills} />
-            <SkillList headline={Position.BackEnd} skills={backEndSkills} />
+            {data.map(skillList => (
+                <SkillList key={skillList.headline} headline={skillList.headline} skills={skillList.skills} />
+            ))}
         </Section>
     )
 }
