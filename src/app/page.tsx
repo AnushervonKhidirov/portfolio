@@ -6,8 +6,6 @@ import ExperienceSection from '@component/sections/experience/experience-section
 import CoursesSection from '@component/sections/courses/courses-section'
 import SkillsSection from '@component/sections/skills/skills-section'
 
-import 'simplebar-react/dist/simplebar.min.css'
-
 const Page = () => {
     return (
         <Scroller pageScroller>
