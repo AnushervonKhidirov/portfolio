@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import type { TOrganizationList } from '@type/organization'
 import type { AdditionalProps } from '@type/common'
 
-import OrganizationBlock from '@common/organization-block/organization-block'
+import OrganizationBlock from '@component/organization/organization-block/organization-block'
 
 import classes from './organization-list.module.css'
 import classNames from 'classnames'

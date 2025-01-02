@@ -3,6 +3,10 @@
     gap: 1.5rem;
 }
 
+.about_text {
+    font-size: 0.8em;
+}
+
 .link {
     transition: color var(--transition-duration);
 }

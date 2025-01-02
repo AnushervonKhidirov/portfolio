@@ -1,7 +1,7 @@
 import type { TSkillList } from '@type/skill'
 
 import Section from '@common/section/section'
-import SkillList from '@common/skill-list/skill-list'
+import SkillList from '@component/skill/skill-list/skill-list'
 
 import classes from './skills-section.module.css'
 

@@ -2,7 +2,7 @@ import type { FC } from 'react'
 import type { AdditionalProps } from '@type/common'
 import type { TSkillList } from '@type/skill'
 
-import SkillBar from '@common/skill-bar/skill-bar'
+import SkillBar from '../skill-bar/skill-bar'
 
 import classNames from 'classnames'
 import classes from './skill-list.module.css'

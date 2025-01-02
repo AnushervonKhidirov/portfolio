@@ -11,24 +11,21 @@ import Stack from '@common/stack/stack'
 import classes from './organization-block.module.css'
 import classNames from 'classnames'
 
-const OrganizationBlock: FC<TOrganization> = ({
-    name,
-    link,
-    country,
-    position,
-    dates,
-    about,
-    tasks,
-    achievement,
-    stack,
-}) => {
+const OrganizationBlock: FC<TOrganization> = organization => {
     return (
         <div className={classes.organization}>
-            <Headline name={name} link={link} position={position} dates={dates} country={country} />
-            {about && <About about={about} />}
-            <List title="Tasks" list={tasks} />
-            {achievement && <List title="Achievements" list={achievement} />}
-            <Stack list={stack} />
+            <Headline
+                name={organization.name}
+                link={organization.link}
+                position={organization.position}
+                dates={organization.dates}
+                country={organization.country}
+            />
+
+            {organization.about && <About about={organization.about} />}
+            <List title="Tasks" list={organization.tasks} />
+            {organization.achievement && <List title="Achievements" list={organization.achievement} />}
+            <Stack list={organization.stack} />
         </div>
     )
 }
