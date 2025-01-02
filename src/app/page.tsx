@@ -1,6 +1,6 @@
 import Scroller from '@common/scroller/scroller'
 import IntroductionSection from '@component/sections/introduction/introduction-section'
-import OrganizationSection from '@component/organization/organization-section/organization-section'
+import OrganizationSection from '@component/sections/organization/organization-section'
 import SkillsSection from '@component/sections/skills/skills-section'
 import ProjectSection from '@component/sections/projects/project-section'
 import ContactsSection from '@component/sections/contacts/contacts-section'

@@ -10,7 +10,7 @@ import { ColumnList, RowList } from '@common/list/list'
 import classes from './organization-block.module.css'
 import classNames from 'classnames'
 
-const OrganizationBlock: FC<TOrganization> = organization => {
+const Organization: FC<TOrganization> = organization => {
     return (
         <div className={classes.organization}>
             <Headline
@@ -50,4 +50,4 @@ const Headline: FC<THeadline> = ({ name, link, country, position, dates }) => {
     )
 }
 
-export default OrganizationBlock
+export default Organization
