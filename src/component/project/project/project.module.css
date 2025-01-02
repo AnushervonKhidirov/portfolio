@@ -1,0 +1,29 @@
+.project {
+    position: relative;
+    display: grid;
+    border-radius: var(--border-radius-medium);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.project_info {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+    background-color: rgba(0, 0, 0, 0.75);
+    line-height: 1.1;
+    padding: 1rem 2rem;
+    opacity: 0;
+    transition: opacity var(--transition-duration);
+}
+
+.project:hover .project_info {
+    opacity: 1;
+}
