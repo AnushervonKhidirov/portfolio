@@ -2,7 +2,7 @@ import type { TOrganization } from '@type/organization'
 import type { TIntroduction } from '@type/introduction'
 import type { TSkillList } from '@type/skill'
 import type { TContacts } from '@type/contacts'
-import type { TProjects } from '@type/projects'
+import type { TProject } from '@type/projects'
 
 import { Grade, Position, Skill } from '@type/common'
 
@@ -79,7 +79,7 @@ export const skillList: TSkillList[] = [
     },
 ]
 
-export const projects: TProjects[] = [
+export const projects: TProject[] = [
     {
         name: 'Charge Motion',
         image: chargeMotionImage,
