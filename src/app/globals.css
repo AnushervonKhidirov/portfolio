@@ -8,6 +8,7 @@
     --thin-line-vide: 1px;
 
     --border-radius-small: 0.6rem;
+    --border-radius-medium: 1.25rem;
     --border-radius-big: 2rem;
 
     --transition-duration: 0.5s;
@@ -30,6 +31,7 @@ body {
     background-color: var(--primary);
     color: white;
     overflow: hidden;
+    user-select: none;
 }
 
 header {
