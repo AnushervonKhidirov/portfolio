@@ -1,18 +1,26 @@
+import classNames from 'classnames'
 import classes from './list.module.css'
 
-const List = ({ title, list }: { title: string, list: string[] }) => {
+export const ColumnList = ({ title, list }: { title: string; list: string[] }) => {
     return (
-        <div className={classes.list}>
+        <div className={classNames(classes.list_wrapper, classes.column_list)}>
             <span>{title}:</span>
-            <ul className={classes.task_list}>
-                {list.map(task => (
-                    <li className={classes.task} key={task}>
-                        {task}
-                    </li>
+
+            <ul className={classes.list}>
+                {list.map(item => (
+                    <li key={item}>{item}</li>
                 ))}
             </ul>
         </div>
     )
 }
 
-export default List
+export const RowList = ({ title, list }: { title: string; list: string[] }) => {
+    return (
+        <div className={classNames(classes.list_wrapper, classes.row_list)}>
+            <span>{title}: </span>
+
+            <span className={classes.list}>{list.join(', ')}</span>
+        </div>
+    )
+}
