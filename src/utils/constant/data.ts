@@ -10,6 +10,8 @@ import { socialLinks } from '@constant/social-links'
 import { frontEndSkills, backEndSkills } from '@constant/skills'
 
 // images
+import stellarBurgerImage from '@images/projects/stellar-burger.png'
+import izziRideImage from '@images/projects/izzi-ride.png'
 import chargeMotionImage from '@images/projects/charge-motion.png'
 
 export const introduction: TIntroduction = {
@@ -81,9 +83,30 @@ export const skillList: TSkillList[] = [
 
 export const projects: TProject[] = [
     {
+        name: 'Stellar Burger',
+        image: stellarBurgerImage,
+        stack: [
+            Skill.TypeScript,
+            Skill.React,
+            Skill.Redux,
+            Skill.ReduxThunk,
+            Skill.ReduxToolkit,
+            Skill.Jest,
+            Skill.Cypress,
+            Skill.WebSocket,
+        ],
+    },
+    {
+        name: 'iZZi Ride',
+        image: izziRideImage,
+        stack: [Skill.TypeScript, Skill.Next, Skill.Redux, Skill.ReduxToolkit],
+        link: 'https://izziride.com/',
+    },
+    {
         name: 'Charge Motion',
         image: chargeMotionImage,
         stack: [Skill.HTML, Skill.CSS, Skill.JavaScript],
+        link: 'https://anushervonkhidirov.github.io/charge-motion/',
     },
 ]
 
