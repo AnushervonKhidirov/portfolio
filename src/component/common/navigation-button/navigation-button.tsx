@@ -6,8 +6,8 @@ import type { AdditionalProps } from '@type/common'
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import classNames from 'classnames'
 
+import classNames from 'classnames'
 import classes from './navigation-button.module.css'
 
 const NavigationButton: FC<AdditionalProps<TNavigationItem>> = ({ href, title, fixButtonPadding, className }) => {

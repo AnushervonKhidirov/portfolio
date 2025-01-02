@@ -7,8 +7,8 @@ import DateRange from '@common/date-range/date-range'
 import About from '@common/about/about'
 import { ColumnList, RowList } from '@common/list/list'
 
-import classes from './organization.module.css'
 import classNames from 'classnames'
+import classes from './organization.module.css'
 
 const Organization: FC<TOrganization> = organization => {
     return (

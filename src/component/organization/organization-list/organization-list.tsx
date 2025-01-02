@@ -4,8 +4,8 @@ import type { AdditionalProps } from '@type/common'
 
 import Organization from '@component/organization/organization/organization'
 
-import classes from './organization-list.module.css'
 import classNames from 'classnames'
+import classes from './organization-list.module.css'
 
 const OrganizationList: FC<AdditionalProps<TOrganizationList>> = ({ list, className }) => {
     return (

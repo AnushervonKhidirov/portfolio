@@ -1,9 +1,17 @@
+import type { FC } from 'react'
+import type { AdditionalProps } from '@type/common'
+
 import classNames from 'classnames'
 import classes from './list.module.css'
 
-export const ColumnList = ({ title, list }: { title: string; list: string[] }) => {
+type TList = {
+    title: string
+    list: string[]
+}
+
+export const ColumnList: FC<AdditionalProps<TList>> = ({ title, list, className }) => {
     return (
-        <div className={classNames(classes.list_wrapper, classes.column_list)}>
+        <div className={classNames(classes.list_wrapper, classes.column_list, className)}>
             <span>{title}:</span>
 
             <ul className={classes.list}>
@@ -15,9 +23,9 @@ export const ColumnList = ({ title, list }: { title: string; list: string[] }) =
     )
 }
 
-export const RowList = ({ title, list }: { title: string; list: string[] }) => {
+export const RowList: FC<AdditionalProps<TList>> = ({ title, list, className }) => {
     return (
-        <div className={classNames(classes.list_wrapper, classes.row_list)}>
+        <div className={classNames(classes.list_wrapper, classes.row_list, className)}>
             <span>{title}: </span>
 
             <span className={classes.list}>{list.join(', ')}</span>
