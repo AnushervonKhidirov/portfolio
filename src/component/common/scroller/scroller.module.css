@@ -1,16 +1,14 @@
 .scroller {
+    position: relative;
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-areas: 'content scroller';
-    grid-template-columns: 1fr max-content;
     overflow: hidden;
     padding: 0 1rem;
 }
 
 .scroller_content {
     display: grid;
-    grid-area: content;
     overflow: auto;
 }
 
@@ -20,10 +18,10 @@
 }
 
 .scroller_line {
-    position: relative;
+    position: absolute;
+    right: 1rem;
     width: 0.5rem;
     height: 98%;
-    grid-area: scroller;
     align-self: center;
     background-color: var(--primaryLight);
     border-radius: 0.5rem;
