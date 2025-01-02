@@ -1,44 +1,53 @@
 import type { TSkill } from '@type/skill'
+import { Skill } from '@type/common'
 
 export const frontEndSkills: TSkill[] = [
     {
-        name: 'HTML',
+        name: Skill.HTML,
         progress: 100,
     },
     {
-        name: 'CSS',
+        name: Skill.CSS,
         progress: 100,
     },
     {
-        name: 'JavaScript',
+        name: Skill.JavaScript,
         progress: 90,
     },
     {
-        name: 'TypeScript',
+        name: Skill.TypeScript,
         progress: 60,
     },
     {
-        name: 'React',
+        name: Skill.React,
         progress: 80,
     },
     {
-        name: 'Next',
+        name: Skill.Next,
         progress: 70,
     },
 ]
 
 export const backEndSkills: TSkill[] = [
     {
-        name: 'NodeJs',
+        name: Skill.Node,
         progress: 40,
     },
     {
-        name: 'Go',
+        name: Skill.Nest,
+        progress: 15,
+    },
+    {
+        name: Skill.Go,
         progress: 25,
     },
     {
-        name: 'MySql',
+        name: Skill.MySql,
         progress: 35,
+    },
+    {
+        name: Skill.Prisma,
+        progress: 15,
     },
 ]
 
