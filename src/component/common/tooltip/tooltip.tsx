@@ -21,7 +21,7 @@ const Tooltip: FC<TooltipProps> = props => {
                     },
                 },
             }}
-        ></MuiTooltip>
+        />
     )
 }
 
