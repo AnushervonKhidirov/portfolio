@@ -18,7 +18,7 @@ const DateRange: FC<AdditionalProps<{ dates: { from: Date; to?: Date } }>> = ({ 
 
         const to = {
             year: dates.to ? dates.to.getFullYear() : new Date().getFullYear(),
-            month: dates.to ? dates.to.getMonth() + 1 : new Date().getMonth() + 1,
+            month: dates.to ? dates.to.getMonth() + 1 : new Date().getMonth(),
         }
 
         let years = to.year - from.year
