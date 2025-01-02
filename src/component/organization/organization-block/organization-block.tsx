@@ -5,8 +5,7 @@ import Link from 'next/link'
 import Tooltip from '@common/tooltip/tooltip'
 import DateRange from '@common/date-range/date-range'
 import About from '@common/about/about'
-import List from '@common/list/list'
-import Stack from '@common/stack/stack'
+import { ColumnList, RowList } from '@common/list/list'
 
 import classes from './organization-block.module.css'
 import classNames from 'classnames'
@@ -23,9 +22,9 @@ const OrganizationBlock: FC<TOrganization> = organization => {
             />
 
             {organization.about && <About about={organization.about} />}
-            <List title="Tasks" list={organization.tasks} />
-            {organization.achievement && <List title="Achievements" list={organization.achievement} />}
-            <Stack list={organization.stack} />
+            <ColumnList title="Tasks" list={organization.tasks} />
+            {organization.achievement && <ColumnList title="Achievements" list={organization.achievement} />}
+            <RowList title="Stack" list={organization.stack} />
         </div>
     )
 }
