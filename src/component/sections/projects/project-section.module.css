@@ -1,0 +1,8 @@
+.contacts a {
+    transition: color var(--transition-duration);
+}
+
+.contacts a:hover {
+    color: var(--tertiary);
+}
+
