@@ -6,7 +6,6 @@ import type { TProjects } from '@type/projects'
 
 import { Grade, Position, Skill } from '@type/common'
 
-
 import { socialLinks } from '@constant/social-links'
 import { frontEndSkills, backEndSkills } from '@constant/skills'
 
@@ -38,13 +37,7 @@ export const experiences: TOrganization[] = [
             'Writing filters',
         ],
         achievement: ['Teamwork', 'Reading old and monolithic code', 'Mentoring'],
-        stack: [
-            Skill.HTML,
-            Skill.CSS,
-            Skill.JavaScript,
-            Skill.Next,
-            Skill.Redux,
-        ],
+        stack: [Skill.HTML, Skill.CSS, Skill.JavaScript, Skill.Next, Skill.Redux],
     },
 ]
 
@@ -88,9 +81,9 @@ export const skillList: TSkillList[] = [
 
 export const projects: TProjects[] = [
     {
-        name: 'project name',
+        name: 'Charge Motion',
         image: chargeMotionImage,
-        stack: ['HTML, CSS, JS'],
+        stack: [Skill.HTML, Skill.CSS, Skill.JavaScript],
     },
 ]
 
