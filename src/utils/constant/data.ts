@@ -1,7 +1,7 @@
 import type { TOrganization } from '@type/organization'
 import type { TIntroduction } from '@type/introduction'
 import type { TSkillList } from '@type/skill'
-import type { TContacts } from '@type/contacts'
+import type { TContact } from '@type/contacts'
 import type { TProject } from '@type/projects'
 
 import { Grade, Position, Skill } from '@type/common'
@@ -110,7 +110,20 @@ export const projects: TProject[] = [
     },
 ]
 
-export const contacts: TContacts = {
-    phone: '+992 12 413 31 41',
-    email: 'myemail@gmail.com',
-}
+export const contacts: TContact[] = [
+    {
+        title: 'Phone',
+        value: '+992 77 100 7676',
+        link: 'tel:+992 77 100 7676',
+    },
+    {
+        title: 'Email',
+        value: 'ankhid98@gmail.com',
+        link: 'mailto:ankhid98@gmail.com',
+    },
+    {
+        title: 'Telegram',
+        value: '@akhid',
+        link: 'https://t.me/akhid',
+    },
+]
