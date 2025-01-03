@@ -11,7 +11,7 @@
     grid-auto-flow: row;
     grid-auto-rows: max-content;
     gap: 1rem;
-    border: var(--thin-line-vide) solid var(--secondary);
+    border: var(--medium-line-vide) solid var(--secondary);
     border-radius: var(--border-radius-big);
     padding: 3rem;
 }
