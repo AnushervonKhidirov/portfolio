@@ -4,6 +4,7 @@
     border-radius: var(--border-radius-medium);
     overflow: hidden;
     cursor: pointer;
+    border: var(--medium-line-vide) solid var(--primaryLight);
 }
 
 .project img {
@@ -18,7 +19,6 @@
     display: grid;
     grid-template-rows: 1fr max-content;
     background-color: rgba(0, 0, 0, 0.75);
-    line-height: 1.1;
     padding: 1rem 2rem;
     opacity: 0;
     transition: opacity var(--transition-duration);
