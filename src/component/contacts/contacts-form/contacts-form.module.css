@@ -1,5 +1,6 @@
 .form {
     display: grid;
+    grid-area: form;
     gap: 0.5em;
     font-size: 0.8em;
 }

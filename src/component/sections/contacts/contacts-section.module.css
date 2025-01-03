@@ -1,6 +1,5 @@
 .contacts {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 4rem;
 }
 
@@ -10,4 +9,17 @@
 
 .contacts a:hover {
     color: var(--tertiary);
+}
+
+@media screen and (min-width: 426px) {
+    .contacts {
+        grid-template-areas: 'form contacts';
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contacts {
+        grid-template-areas: 'contacts' 'form';
+    }
 }
