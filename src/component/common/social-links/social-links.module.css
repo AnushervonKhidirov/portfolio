@@ -11,7 +11,7 @@
     border-width: 0.2rem;
     border-color: var(--secondary);
     border-radius: 100%;
-    transition: var(--transition-duration);
+    transition: border-color var(--transition-duration);
     border-style: solid;
 }
 
@@ -21,7 +21,7 @@
 
 .social_link > svg {
     fill: var(--secondary);
-    transition: var(--transition-duration);
+    transition: fill var(--transition-duration);
 }
 
 .social_link:hover > svg {
