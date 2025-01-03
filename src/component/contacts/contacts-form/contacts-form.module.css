@@ -1,0 +1,45 @@
+.form {
+    display: grid;
+    gap: 0.5em;
+    font-size: 0.8em;
+}
+
+.form input,
+.form textarea {
+    background-color: transparent;
+    color: inherit;
+    border: var(--medium-line-vide) solid var(--secondary);
+    border-radius: var(--border-radius-medium);
+    outline: none;
+    padding: 0.5em 1em;
+    transition: border-color var(--transition-duration);
+    font: inherit;
+    resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: inherit;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: var(--tertiary);
+}
+
+.form button {
+    min-width: 10em;
+    justify-self: self-end;
+    background-color: var(--secondary);
+    color: inherit;
+    border: none;
+    border-radius: var(--border-radius-medium);
+    padding: 0.5em 2em;
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+    font: inherit;
+}
+
+.form button:hover {
+    background-color: var(--primaryLight);
+}

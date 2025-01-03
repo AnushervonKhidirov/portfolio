@@ -1,0 +1,4 @@
+.contact_item {
+    display: grid;
+    grid-template-columns: 5em max-content;
+}

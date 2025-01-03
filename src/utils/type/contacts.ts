@@ -1,4 +1,5 @@
-export type TContacts = {
-    phone: string
-    email: string
+export type TContact = {
+    title: string
+    value: string
+    link?: string
 }

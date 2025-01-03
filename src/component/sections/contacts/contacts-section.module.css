@@ -1,3 +1,9 @@
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
 .contacts a {
     transition: color var(--transition-duration);
 }
@@ -5,4 +11,3 @@
 .contacts a:hover {
     color: var(--tertiary);
 }
-
