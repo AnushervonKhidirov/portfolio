@@ -5,7 +5,10 @@
     --primaryLight: #302e46;
 
     --padding-inline: 7rem;
+    
     --thin-line-vide: 1px;
+    --medium-line-vide: 2px;
+    --bold-line-vide: 3px;
 
     --border-radius-small: 0.6rem;
     --border-radius-medium: 1.25rem;
