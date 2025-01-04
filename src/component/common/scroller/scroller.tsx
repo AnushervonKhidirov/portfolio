@@ -2,7 +2,7 @@
 import type { FC } from 'react'
 import type { AdditionalProps } from '@type/common'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import useActiveNavigation from '@store/active-navigation'
 
 import classNames from 'classnames'
@@ -24,7 +24,19 @@ const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, handleMenu, cl
 
     const activeNavigation = useActiveNavigation(state => state)
 
-    function scrollerPositionHandler() {
+    const getActiveFromRange = useCallback((position: number) => {
+        const sectionKeys = Object.keys(activeNavigation.sectionPosition)
+
+        sectionKeys.forEach(key => {
+            const section = activeNavigation.sectionPosition[key]
+
+            if (position >= section.top && position < section.bottom) {
+                activeNavigation.setActive(key)
+            }
+        })
+    }, [activeNavigation])
+
+    const scrollerPositionHandler = useCallback(() => {
         const scrollerContent = scrollerContentRef.current
 
         if (!scrollerContent) return
@@ -39,19 +51,7 @@ const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, handleMenu, cl
         if (handleMenu) {
             getActiveFromRange(scrollTop + clientHeight / 3)
         }
-    }
-
-    function getActiveFromRange(position: number) {
-        const sectionKeys = Object.keys(activeNavigation.sectionPosition)
-
-        sectionKeys.forEach(key => {
-            const section = activeNavigation.sectionPosition[key]
-
-            if (position >= section.top && position < section.bottom) {
-                activeNavigation.setActive(key)
-            }
-        })
-    }
+    }, [scrollerContentRef, getActiveFromRange, handleMenu])
 
     function calcScrollerBarHeight() {
         const scrollerContent = scrollerContentRef.current
@@ -81,7 +81,7 @@ const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, handleMenu, cl
                 scrollerContent.addEventListener('scroll', scrollerPositionHandler)
             }
         }
-    }, [scrollerContentRef])
+    }, [scrollerContentRef, scrollerPositionHandler])
 
     return (
         <div
