@@ -3,15 +3,17 @@ import type { FC } from 'react'
 import type { AdditionalProps } from '@type/common'
 
 import { useState, useEffect, useRef } from 'react'
+import useActiveNavigation from '@store/active-navigation'
 
 import classNames from 'classnames'
 import classes from './scroller.module.css'
 
 type TScroller = {
     pageScroller?: boolean
+    handleMenu?: boolean
 }
 
-const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, className, children }) => {
+const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, handleMenu, className, children }) => {
     const scrollerWrapperRef = useRef<HTMLDivElement>(null)
     const scrollerContentRef = useRef<HTMLDivElement>(null)
     const scrollerBarRef = useRef<HTMLDivElement>(null)
@@ -19,6 +21,8 @@ const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, className, chi
     const [position, setPosition] = useState(0)
     const [showScrollerBar, setShowScrollerBar] = useState(false)
     const [scrollerBarHeight, setScrollerBarHeight] = useState(0)
+
+    const activeNavigation = useActiveNavigation(state => state)
 
     function scrollerPositionHandler() {
         const scrollerContent = scrollerContentRef.current
@@ -31,6 +35,22 @@ const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, className, chi
         const maxScroll = scrollHeight - clientHeight
 
         setPosition((scrollTop / maxScroll) * 100)
+
+        if (handleMenu) {
+            getActiveFromRange(scrollTop + clientHeight / 3)
+        }
+    }
+
+    function getActiveFromRange(position: number) {
+        const sectionKeys = Object.keys(activeNavigation.sectionPosition)
+
+        sectionKeys.forEach(key => {
+            const section = activeNavigation.sectionPosition[key]
+
+            if (position >= section.top && position < section.bottom) {
+                activeNavigation.setActive(key)
+            }
+        })
     }
 
     function calcScrollerBarHeight() {

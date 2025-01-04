@@ -23,12 +23,12 @@ export const ColumnList: FC<AdditionalProps<TList>> = ({ title, list, className 
     )
 }
 
-export const RowList: FC<AdditionalProps<TList>> = ({ title, list, className }) => {
+export const RowList: FC<AdditionalProps<TList & { highlight?: boolean }>> = ({ title, list, highlight, className }) => {
     return (
         <div className={classNames(classes.list_wrapper, classes.row_list, className)}>
             <span>{title}: </span>
 
-            <span className={classes.list}>{list.join(', ')}</span>
+            <span className={classNames(classes.list, {[classes.highlight]: highlight})}>{list.join(', ')}</span>
         </div>
     )
 }

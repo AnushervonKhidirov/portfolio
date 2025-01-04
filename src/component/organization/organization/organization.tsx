@@ -24,7 +24,7 @@ const Organization: FC<TOrganization> = organization => {
             {organization.about && <About about={organization.about} />}
             <ColumnList title="Tasks" list={organization.tasks} />
             {organization.achievement && <ColumnList title="Achievements" list={organization.achievement} />}
-            <RowList title="Stack" list={organization.stack} />
+            <RowList title="Stack" list={organization.stack} highlight />
         </div>
     )
 }

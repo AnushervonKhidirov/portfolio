@@ -4,17 +4,22 @@ import type { FC } from 'react'
 import type { TNavigationItem } from '@type/navigation'
 import type { AdditionalProps } from '@type/common'
 
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+
+import useActiveNavigation from '@store/active-navigation'
 
 import classNames from 'classnames'
 import classes from './navigation-button.module.css'
 
 const NavigationButton: FC<AdditionalProps<TNavigationItem>> = ({ href, title, fixButtonPadding, className }) => {
-    const pathname = usePathname()
+    const activeNavigation = useActiveNavigation(state => state)
 
     function isActive() {
-        return href === pathname
+        return title === activeNavigation.active
+    }
+
+    function clickHandler() {
+        activeNavigation.setActive(title)
     }
 
     return (
@@ -25,6 +30,7 @@ const NavigationButton: FC<AdditionalProps<TNavigationItem>> = ({ href, title, f
                 { [classes.active]: isActive() },
                 className,
             )}
+            onClick={clickHandler}
             href={href}
         >
             {title}

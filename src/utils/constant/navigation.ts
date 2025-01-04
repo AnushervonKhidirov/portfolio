@@ -2,27 +2,27 @@ import type { TNavigationItem } from '@type/navigation'
 
 export const navigationList: TNavigationItem[] = [
     {
-        href: '/about',
+        href: '#about',
         title: 'About',
     },
     {
-        href: '/experience',
+        href: '#experience',
         title: 'Experience',
     },
     {
-        href: '/trainings',
+        href: '#trainings',
         title: 'Trainings',
     },
     {
-        href: '/skills',
+        href: '#skills',
         title: 'Skills',
     },
     {
-        href: '/projects',
+        href: '#projects',
         title: 'Projects',
     },
     {
-        href: '/contacts',
+        href: '#contacts',
         title: 'Contacts',
     },
 ]

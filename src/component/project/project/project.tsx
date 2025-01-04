@@ -16,7 +16,7 @@ const Project: FC<TProject> = ({ name, image, stack, link }) => {
 
                 <div className={classes.project_info}>
                     <h4>{name}</h4>
-                    <RowList title="Stack" list={stack} />
+                    <RowList title="Stack" list={stack} highlight />
                 </div>
             </Link>
         </Tooltip>
@@ -26,7 +26,7 @@ const Project: FC<TProject> = ({ name, image, stack, link }) => {
 
             <div className={classes.project_info}>
                 <h4>{name}</h4>
-                <RowList title="Stack" list={stack} />
+                <RowList title="Stack" list={stack} highlight />
             </div>
         </div>
     )

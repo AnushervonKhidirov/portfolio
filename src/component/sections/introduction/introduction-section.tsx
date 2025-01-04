@@ -9,7 +9,7 @@ import classes from './introduction-section.module.css'
 
 const IntroductionSection = ({ data }: { data: TIntroduction }) => {
     return (
-        <Section title="Introduction" className={classes.introduction_section}>
+        <Section title="About" className={classes.introduction_section}>
             <Introduction className={classes.introduction} {...data} />
             <LaptopImage className={classes.image} />
         </Section>

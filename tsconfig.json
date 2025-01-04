@@ -24,6 +24,7 @@
             "@constant/*": ["./src/utils/constant/*"],
             "@helper/*": ["./src/utils/helper/*"],
             "@type/*": ["./src/utils/type/*"],
+            "@store/*": ["./src/utils/store/*"],
             "@images/*": ["./public/assets/images/*"],
             "@/*": ["./src/*"]
         }

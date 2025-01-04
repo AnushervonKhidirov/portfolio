@@ -9,7 +9,7 @@ import { introduction, experiences, trainings, skillList, projects, contacts } f
 
 const Page = () => {
     return (
-        <Scroller pageScroller>
+        <Scroller pageScroller handleMenu>
             <IntroductionSection data={introduction} />
             <OrganizationSection title="Experience" data={experiences} />
             <OrganizationSection title="Trainings" data={trainings} />
