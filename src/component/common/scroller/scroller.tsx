@@ -2,7 +2,7 @@
 import type { FC } from 'react'
 import type { AdditionalProps } from '@type/common'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import useActiveNavigation from '@store/active-navigation'
 
 import classNames from 'classnames'
@@ -24,19 +24,7 @@ const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, handleMenu, cl
 
     const activeNavigation = useActiveNavigation(state => state)
 
-    const getActiveFromRange = useCallback((position: number) => {
-        const sectionKeys = Object.keys(activeNavigation.sectionPosition)
-
-        sectionKeys.forEach(key => {
-            const section = activeNavigation.sectionPosition[key]
-
-            if (position >= section.top && position < section.bottom) {
-                activeNavigation.setActive(key)
-            }
-        })
-    }, [activeNavigation])
-
-    const scrollerPositionHandler = useCallback(() => {
+    function scrollerPositionHandler () {
         const scrollerContent = scrollerContentRef.current
 
         if (!scrollerContent) return
@@ -51,7 +39,19 @@ const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, handleMenu, cl
         if (handleMenu) {
             getActiveFromRange(scrollTop + clientHeight / 3)
         }
-    }, [scrollerContentRef, getActiveFromRange, handleMenu])
+    }
+
+    function getActiveFromRange (position: number) {
+        const sectionKeys = Object.keys(activeNavigation.sectionPosition)
+
+        sectionKeys.forEach(key => {
+            const section = activeNavigation.sectionPosition[key]
+
+            if (position >= section.top && position < section.bottom) {
+                activeNavigation.setActive(key)
+            }
+        })
+    }
 
     function calcScrollerBarHeight() {
         const scrollerContent = scrollerContentRef.current
@@ -81,7 +81,8 @@ const Scroller: FC<AdditionalProps<TScroller>> = ({ pageScroller, handleMenu, cl
                 scrollerContent.addEventListener('scroll', scrollerPositionHandler)
             }
         }
-    }, [scrollerContentRef, scrollerPositionHandler])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [scrollerContentRef])
 
     return (
         <div
