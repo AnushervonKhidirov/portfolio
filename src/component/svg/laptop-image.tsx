@@ -1,6 +1,6 @@
 const LaptopImage = ({ className }: { className?: string }) => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 621 423" fill="none" className={className}>
+        <svg viewBox="0 0 621 423" fill="none" className={className}>
             <path
                 d="M321.687 386.452L139.451 281.099C136.789 279.571 137.13 276.892 140.196 275.111L257.186 207.495C260.252 205.726 264.883 205.537 267.545 207.065L449.78 312.418C452.43 313.96 452.102 316.638 449.036 318.407L332.071 386.023C328.98 387.791 324.349 387.993 321.687 386.452Z"
                 opacity="0.2"

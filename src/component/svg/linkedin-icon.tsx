@@ -1,6 +1,6 @@
 const LinkedInIcon = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310" data-title="LinkedIn" style={{ padding: '25%' }}>
+        <svg viewBox="0 0 310 310" data-title="LinkedIn" style={{ padding: '25%' }}>
             <g id="XMLID_801_">
                 <path
                     id="XMLID_802_"
