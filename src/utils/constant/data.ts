@@ -29,7 +29,7 @@ export const experiences: TOrganization[] = [
         country: 'Canada',
         position: Position.FrontEnd,
         dates: { from: new Date('01/01/2020') },
-        about: 'About this company',
+        about: 'Company which provides brands with scalable, interactive, high impact, cross-device advertising technologies.',
         tasks: [
             'Bug fixing',
             'Adding new features',
@@ -37,9 +37,28 @@ export const experiences: TOrganization[] = [
             'Decomposing code',
             'Optimizing reports page',
             'Writing filters',
+            'Working with Media and Video',
         ],
         achievement: ['Teamwork', 'Reading old and monolithic code', 'Mentoring'],
         stack: [Skill.HTML, Skill.CSS, Skill.JavaScript, Skill.Next, Skill.Redux],
+    },
+    {
+        name: 'Freelance',
+        position: Position.FrontEnd,
+        dates: { from: new Date('05/01/2019'), to: new Date('01/01/2020') },
+        tasks: ['Creating admin panels', 'Building websites (SPA/SSR)', 'Adding new features', 'Bug fixing'],
+        stack: [
+            Skill.HTML,
+            Skill.CSS,
+            Skill.JavaScript,
+            Skill.TypeScript,
+            Skill.Next,
+            Skill.React,
+            Skill.Redux,
+            Skill.ReduxToolkit,
+            Skill.Zustand,
+            Skill.WebSocket,
+        ],
     },
 ]
 
