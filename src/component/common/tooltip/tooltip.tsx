@@ -13,6 +13,9 @@ const Tooltip: FC<TooltipProps> = props => {
                         [`&.${tooltipClasses.popper}[data-popper-placement*="bottom"] .${tooltipClasses.tooltip}`]: {
                             marginTop: props.followCursor ? '1.5em' : '0.5em',
                         },
+                        [`&.${tooltipClasses.popper}`]: {
+                            pointerEvents: 'none',
+                        },
                     },
                 },
                 tooltip: {
