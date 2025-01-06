@@ -8,8 +8,6 @@ import { RowList } from '@common/list/list'
 import classes from './project.module.css'
 
 const Project: FC<TProject> = ({ name, image, stack, links }) => {
-    console.log(links)
-
     return (
         <div className={classes.project}>
             <Image src={image.src} width={image.width} height={image.height} alt={name} />
