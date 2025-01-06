@@ -8,5 +8,8 @@ export type TProject = {
     name: string
     image: StaticImageData
     stack: string[]
-    link?: string
+    links?: {
+        name: string
+        href: string
+    }[]
 }

@@ -8,7 +8,7 @@ import { Grade, Position, Skill } from '@type/common'
 
 import { socialLinks } from '@constant/social-links'
 import { frontEndSkills, backEndSkills } from '@constant/skills'
-
+import { GitHubIcon, WebsiteIcon } from '@component/svg'
 // images
 import stellarBurgerImage from '@images/projects/stellar-burger.png'
 import izziRideImage from '@images/projects/izzi-ride.png'
@@ -95,18 +95,47 @@ export const projects: TProject[] = [
             Skill.Cypress,
             Skill.WebSocket,
         ],
+        links: [
+            {
+                title: 'GitHub',
+                href: 'https://github.com/AnushervonKhidirov/stellar-burger',
+                Icon: GitHubIcon,
+            },
+        ],
     },
     {
         name: 'iZZi Ride',
         image: izziRideImage,
         stack: [Skill.TypeScript, Skill.Next, Skill.Redux, Skill.ReduxToolkit],
-        link: 'https://izziride.com/',
+        links: [
+            {
+                title: 'GitHub',
+                href: 'https://github.com/dwnGnL/izzi-ride',
+                Icon: GitHubIcon,
+            },
+            {
+                title: 'Website',
+                href: 'https://izziride.com/',
+                Icon: WebsiteIcon,
+            },
+        ],
     },
     {
         name: 'Charge Motion',
         image: chargeMotionImage,
         stack: [Skill.HTML, Skill.CSS, Skill.JavaScript],
-        link: 'https://anushervonkhidirov.github.io/charge-motion/',
+        links: [
+            {
+                title: 'GitHub',
+                href: 'https://github.com/AnushervonKhidirov/charge-motion',
+                Icon: GitHubIcon,
+            },
+            {
+                title: 'Website',
+                href: 'https://anushervonkhidirov.github.io/charge-motion/',
+                Icon: WebsiteIcon,
+            },
+        ],
     },
 ]
 

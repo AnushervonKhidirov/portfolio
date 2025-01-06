@@ -16,7 +16,7 @@ const ProjectList: FC<AdditionalProps<TProjectList>> = ({ list, className }) => 
                         name={project.name}
                         image={project.image}
                         stack={project.stack}
-                        link={project.link}
+                        links={project.links}
                         key={project.name}
                     />
                 )
