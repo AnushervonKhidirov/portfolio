@@ -20,7 +20,7 @@
         "paths": {
             "@common/*": ["./src/component/common/*"],
             "@component/*": ["./src/component/*"],
-            "@store/*": ["./src/service/store/*"],
+            "@services/*": ["./src/services/*"],
             "@constant/*": ["./src/utils/constant/*"],
             "@helper/*": ["./src/utils/helper/*"],
             "@type/*": ["./src/utils/type/*"],
