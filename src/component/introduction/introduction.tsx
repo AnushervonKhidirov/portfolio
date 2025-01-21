@@ -1,6 +1,6 @@
 import type { FC } from 'react'
-import type { TIntroduction } from '@type/introduction'
-import type { AdditionalProps } from '@type/common'
+import type { TIntroduction } from '@type/introduction.type'
+import type { AdditionalProps } from '@type/common.type'
 
 import SocialLinks from '@common/social-links/social-links'
 
@@ -12,7 +12,9 @@ const Introduction: FC<AdditionalProps<TIntroduction>> = ({ name, grade, positio
         <div className={classNames(classes.introduction, className)}>
             <div>
                 <h1 className={classes.name}>Hi, I'm {name}</h1>
-                <h3 className={classes.position}>{grade} {position} Developer</h3>
+                <h3 className={classes.position}>
+                    {grade} {position} Developer
+                </h3>
                 <div className={classes.about}>{about}</div>
             </div>
             <SocialLinks className={classes.social} socialLinks={socialLinks} />
