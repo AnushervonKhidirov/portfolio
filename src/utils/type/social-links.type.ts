@@ -1,9 +1,9 @@
 export type TSocialLink = {
+    id: string
     title: string
     href: string
-    Icon: () => JSX.Element
 }
 
-export type TSocialLinkList = {
+export type TSocialLinksProps = {
     socialLinks: TSocialLink[]
 }

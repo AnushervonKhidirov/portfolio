@@ -1,5 +1,5 @@
 import type { StaticImageData } from 'next/image'
-import { TSocialLink } from './social-links'
+import type { TSocialLink } from './social-links.type'
 
 export type TProjectList = {
     list: TProject[]
