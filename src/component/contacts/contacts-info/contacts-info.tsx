@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 import classes from './contacts-info.module.css'
 
-const ContactsInfo: FC<{ data: TContact[] }> = ({ data }) => {
+const ContactsInfo: FC<{ contacts: TContact[] }> = ({ contacts }) => {
     return (
         <div>
             <h6>Contacts</h6>
-            {data.map(contact => {
+            {contacts.map(contact => {
                 return (
                     <div className={classes.contact_item} key={contact.title}>
                         <span>{contact.title}: </span>
