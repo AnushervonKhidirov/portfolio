@@ -3,6 +3,6 @@ export type TUser = {
     surname: string
     birthDate: string
     about: string
-    positionId: string
-    gradeId?: string
+    position: string
+    grade: string
 }
