@@ -1,10 +1,7 @@
 import type { TOrganization } from '@type/organization'
-import type { TSkillList } from '@type/skill'
 import type { TProject } from '@type/projects'
 
 import { Position, Skill } from '@type/common'
-
-import { frontEndSkills, backEndSkills } from '@constant/skills'
 
 // images
 import stellarBurgerImage from '@images/projects/stellar-burger.png'
@@ -75,17 +72,6 @@ export const trainings: TOrganization[] = [
             Skill.Cypress,
             Skill.WebSocket,
         ],
-    },
-]
-
-export const skillList: TSkillList[] = [
-    {
-        headline: Position.FrontEnd,
-        skills: frontEndSkills,
-    },
-    {
-        headline: Position.BackEnd,
-        skills: backEndSkills,
     },
 ]
 
