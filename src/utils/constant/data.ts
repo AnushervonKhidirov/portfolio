@@ -1,26 +1,15 @@
 import type { TOrganization } from '@type/organization'
-import type { TIntroduction } from '@type/introduction'
 import type { TSkillList } from '@type/skill'
-import type { TContact } from '@type/contacts'
 import type { TProject } from '@type/projects'
 
-import { Grade, Position, Skill } from '@type/common'
+import { Position, Skill } from '@type/common'
 
-import { socialLinks } from '@constant/social-links'
 import { frontEndSkills, backEndSkills } from '@constant/skills'
-import { GitHubIcon, WebsiteIcon } from '@component/svg'
+
 // images
 import stellarBurgerImage from '@images/projects/stellar-burger.png'
 import izziRideImage from '@images/projects/izzi-ride.png'
 import chargeMotionImage from '@images/projects/charge-motion.png'
-
-export const introduction: TIntroduction = {
-    name: 'Anushervon',
-    grade: Grade.Middle,
-    position: Position.FrontEnd,
-    about: 'I am a punctual and sociable front-end developer who likes working in a team, learning new technologies and improving skills. While working with the code, I am trying to write readable code and keeping it up to date.',
-    socialLinks: socialLinks,
-}
 
 export const experiences: TOrganization[] = [
     {
@@ -116,9 +105,9 @@ export const projects: TProject[] = [
         ],
         links: [
             {
+                id: 'https://github.com/AnushervonKhidirov/stellar-burger',
                 title: 'GitHub',
                 href: 'https://github.com/AnushervonKhidirov/stellar-burger',
-                Icon: GitHubIcon,
             },
         ],
     },
@@ -128,14 +117,14 @@ export const projects: TProject[] = [
         stack: [Skill.TypeScript, Skill.Next, Skill.Redux, Skill.ReduxToolkit],
         links: [
             {
+                id: 'https://github.com/dwnGnL/izzi-ride',
                 title: 'GitHub',
                 href: 'https://github.com/dwnGnL/izzi-ride',
-                Icon: GitHubIcon,
             },
             {
+                id: 'https://izziride.com/',
                 title: 'Website',
                 href: 'https://izziride.com/',
-                Icon: WebsiteIcon,
             },
         ],
     },
@@ -145,33 +134,15 @@ export const projects: TProject[] = [
         stack: [Skill.HTML, Skill.CSS, Skill.JavaScript],
         links: [
             {
+                id: 'https://github.com/AnushervonKhidirov/charge-motion',
                 title: 'GitHub',
                 href: 'https://github.com/AnushervonKhidirov/charge-motion',
-                Icon: GitHubIcon,
             },
             {
+                id: 'https://anushervonkhidirov.github.io/charge-motion/',
                 title: 'Website',
                 href: 'https://anushervonkhidirov.github.io/charge-motion/',
-                Icon: WebsiteIcon,
             },
         ],
-    },
-]
-
-export const contacts: TContact[] = [
-    {
-        title: 'Phone',
-        value: '+992 77 100 7676',
-        link: 'tel:+992 77 100 7676',
-    },
-    {
-        title: 'Email',
-        value: 'ankhid98@gmail.com',
-        link: 'mailto:ankhid98@gmail.com',
-    },
-    {
-        title: 'Telegram',
-        value: '@akhid',
-        link: 'https://t.me/akhid',
     },
 ]
