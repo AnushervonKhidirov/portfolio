@@ -7,4 +7,5 @@ export enum Endpoint {
     Grades = `${endpoint}/grades`,
     Grade = `${endpoint}/grades/[id]`,
     SocialLinks = `${endpoint}/social-links`,
+    Contacts = `${endpoint}/contacts`,
 }
