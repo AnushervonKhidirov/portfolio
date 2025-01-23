@@ -21,11 +21,11 @@ const IntroductionSection = () => {
     const [socialLinksList, setSocialLinksList] = useState<TSocialLink[]>([])
 
     async function getUserInfo() {
-        const userInfo = await user.getUserInfo()
+        const userInfo = await user.findOne()
         if (!userInfo) return
         setUserInfo(userInfo)
 
-        const socialLinkList = await socialLinks.getSocialLinks()
+        const socialLinkList = await socialLinks.findAll()
         setSocialLinksList(socialLinkList)
     }
 

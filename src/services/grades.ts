@@ -5,9 +5,9 @@ import axios from 'axios'
 import { Endpoint } from '@constant/endpoints'
 
 export class Grades {
-    async getGrades(): Promise<TPosition | null> {
+    async findAll(): Promise<TPosition[] | null> {
         try {
-            const response = await axios.get<TPosition>(Endpoint.Grades)
+            const response = await axios.get<TPosition[]>(Endpoint.Grades)
 
             if (response.status !== 200 || !response.data) throw new Error('Unable to get grades')
 
@@ -19,7 +19,7 @@ export class Grades {
         return null
     }
 
-    async getGrade(id: string): Promise<TPosition | null> {
+    async findOne(id: string): Promise<TPosition | null> {
         try {
             const response = await axios.get<TPosition>(Endpoint.Grade.replace('[id]', id))
 

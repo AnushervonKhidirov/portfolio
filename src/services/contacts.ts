@@ -5,7 +5,7 @@ import axios from 'axios'
 import { Endpoint } from '@constant/endpoints'
 
 export class Contacts {
-    async getContacts(): Promise<TContact[] | null> {
+    async findAll(): Promise<TContact[] | null> {
         try {
             const response = await axios.get<TContact[]>(Endpoint.Contacts)
 

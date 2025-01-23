@@ -5,7 +5,7 @@ import axios from 'axios'
 import { Endpoint } from '@constant/endpoints'
 
 export class User {
-    async getUserInfo(): Promise<TUser | null> {
+    async findOne(): Promise<TUser | null> {
         try {
             const response = await axios.get<TUser>(Endpoint.UserInfo)
 

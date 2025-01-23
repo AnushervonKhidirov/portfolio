@@ -17,7 +17,7 @@ const ContactsSection = () => {
     const [contactList, setContactList] = useState<TContact[] | null>(null)
 
     async function getContacts() {
-        const concatList = await contacts.getContacts()
+        const concatList = await contacts.findAll()
         setContactList(concatList)
     }
 

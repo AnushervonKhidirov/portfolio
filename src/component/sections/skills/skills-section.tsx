@@ -15,7 +15,7 @@ const SkillsSection = () => {
     const [groupedSkills, setGroupedSkills] = useState<TSkillGroup[] | null>(null)
 
     async function collectSkills() {
-        const skillList = await skills.getSkills()
+        const skillList = await skills.findAll()
         if (!skillList) return
 
         const groupedSkills = skills.groupSkills(skillList)

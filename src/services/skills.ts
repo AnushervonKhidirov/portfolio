@@ -1,11 +1,11 @@
-import type { TSkill, TSkillGroup } from '@type/skill.type'
+import type { TSkill, TSkillGroup, TAvailableSkill } from '@type/skill.type'
 
 import axios from 'axios'
 
 import { Endpoint } from '@constant/endpoints'
 
 export class Skills {
-    async getSkills(): Promise<TSkill[] | null> {
+    async findAll(): Promise<TSkill[] | null> {
         try {
             const response = await axios.get<TSkill[]>(Endpoint.Skills)
 
@@ -19,11 +19,11 @@ export class Skills {
         return null
     }
 
-    async getAvailableSkills(): Promise<TSkill[] | null> {
+    async findOne(id: string): Promise<TSkill | null> {
         try {
-            const response = await axios.get<TSkill[]>(Endpoint.SkillsAvailable)
+            const response = await axios.get<TSkill>(Endpoint.Skill.replace('[id]', id))
 
-            if (response.status !== 200 || !response.data) throw new Error('Unable to get available skills')
+            if (response.status !== 200 || !response.data) throw new Error('Unable to get skill')
 
             return response.data
         } catch (err) {
@@ -33,11 +33,11 @@ export class Skills {
         return null
     }
 
-    async getSkill(id: string): Promise<TSkill | null> {
+    async findAllAvailableSkills(): Promise<TAvailableSkill[] | null> {
         try {
-            const response = await axios.get<TSkill>(Endpoint.Skill.replace('[id]', id))
+            const response = await axios.get<TAvailableSkill[]>(Endpoint.SkillsAvailable)
 
-            if (response.status !== 200 || !response.data) throw new Error('Unable to get skill')
+            if (response.status !== 200 || !response.data) throw new Error('Unable to get available skills')
 
             return response.data
         } catch (err) {

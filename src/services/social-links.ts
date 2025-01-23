@@ -5,7 +5,7 @@ import axios from 'axios'
 import { Endpoint } from '@constant/endpoints'
 
 export class SocialLinks {
-    async getSocialLinks(): Promise<TSocialLink[]> {
+    async findAll(): Promise<TSocialLink[]> {
         try {
             const response = await axios.get<TSocialLink[]>(Endpoint.SocialLinks)
 

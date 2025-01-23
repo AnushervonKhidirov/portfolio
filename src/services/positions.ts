@@ -5,7 +5,7 @@ import axios from 'axios'
 import { Endpoint } from '@constant/endpoints'
 
 export class Positions {
-    async getPositions() {
+    async findAll() {
         try {
             const response = await axios.get<TPosition[]>(Endpoint.Positions)
 
@@ -19,7 +19,7 @@ export class Positions {
         return null
     }
 
-    async getPosition(id: string) {
+    async findOne(id: string) {
         try {
             const response = await axios.get<TPosition>(Endpoint.Position.replace('[id]', id))
 
