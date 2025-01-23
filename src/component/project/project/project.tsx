@@ -15,7 +15,11 @@ const Project: FC<TProject> = ({ name, image, stack, links }) => {
             <div className={classes.project_info}>
                 <h4>{name}</h4>
                 {links && <SocialLinks socialLinks={links} />}
-                <RowList title="Stack" list={stack} highlight />
+                <RowList
+                    title="Stack"
+                    list={stack.map(stack => ({ id: Math.random().toString(), value: stack }))}
+                    highlight
+                />
             </div>
         </div>
     )
