@@ -9,3 +9,8 @@ export type TSkillGroup = {
     headline: string
     skills: TSkill[]
 }
+
+export type TAvailableSkill = {
+    id: string
+    value: string
+}
