@@ -1,8 +1,8 @@
 'use client'
 
 import type { FC } from 'react'
-import type { TNavigationItem } from '@type/navigation'
-import type { AdditionalProps } from '@type/common'
+import type { AdditionalProps } from '@type/common.type'
+import type { TNavigationItem } from '@type/navigation.type'
 
 import Link from 'next/link'
 

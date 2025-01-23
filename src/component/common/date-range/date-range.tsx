@@ -1,14 +1,21 @@
 import type { FC } from 'react'
-import type { AdditionalProps } from '@type/common'
+import type { AdditionalProps, TDateRange } from '@type/common.type'
 
 import classNames from 'classnames'
 import classes from './date-range.module.css'
 
-const DateRange: FC<AdditionalProps<{ dates: { from: Date; to?: Date } }>> = ({ dates, className }) => {
-    const dateFromText = dates.from.toLocaleString('default', { month: 'short', year: 'numeric' })
-    const dateToText = dates.to ? dates.to.toLocaleString('default', { month: 'short', year: 'numeric' }) : 'Now'
+const DateRange: FC<AdditionalProps<{ dates: TDateRange }>> = ({ dates, className }) => {
+    const convertedDates = {
+        from: new Date(dates.from),
+        to: dates.to ? new Date(dates.to) : undefined,
+    }
 
-    const duration = getDurationText(getRangeDuration(dates))
+    const dateFromText = convertedDates.from.toLocaleString('default', { month: 'short', year: 'numeric' })
+    const dateToText = convertedDates.to
+        ? convertedDates.to.toLocaleString('default', { month: 'short', year: 'numeric' })
+        : 'Now'
+
+    const duration = getDurationText(getRangeDuration(convertedDates))
 
     function getRangeDuration(dates: { from: Date; to?: Date }) {
         const from = {

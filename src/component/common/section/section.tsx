@@ -1,6 +1,6 @@
 'use client'
 import type { FC } from 'react'
-import type { AdditionalProps } from '@type/common'
+import type { AdditionalProps } from '@type/common.type'
 
 import { useEffect, useRef } from 'react'
 

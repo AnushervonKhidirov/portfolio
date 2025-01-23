@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { PropsWithChildren } from 'react'
 
 export type AdditionalProps<T = object> = T &
@@ -7,6 +6,13 @@ export type AdditionalProps<T = object> = T &
     }
 
 export type TDateRange = {
-    from: Date
-    to?: Date
+    from: number
+    to?: number | null
 }
+
+export type TIdValueObject<T = unknown> = {
+    id: string
+    value: T
+}
+
+export type TQuery = { [key: string]: string | number }

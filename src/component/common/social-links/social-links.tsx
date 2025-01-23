@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { AdditionalProps } from '@type/common'
+import type { AdditionalProps } from '@type/common.type'
 import type { TSocialLinksProps } from '@type/social-links.type'
 
 import Link from 'next/link'

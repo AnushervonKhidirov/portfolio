@@ -1,18 +1,19 @@
 import Scroller from '@common/scroller/scroller'
 import IntroductionSection from '@component/sections/introduction/introduction-section'
-import OrganizationSection from '@component/sections/organization/organization-section'
+import ExperienceSection from '@component/sections/experience/experience-section'
+import TrainingSection from '@component/sections/training/training-section'
 import SkillsSection from '@component/sections/skills/skills-section'
 import ProjectSection from '@component/sections/projects/project-section'
 import ContactsSection from '@component/sections/contacts/contacts-section'
 
-import { experiences, trainings, projects } from '@constant/data'
+import { projects } from '@constant/data'
 
 const Page = () => {
     return (
         <Scroller pageScroller handleMenu>
             <IntroductionSection />
-            <OrganizationSection title="Experience" data={experiences} />
-            <OrganizationSection title="Trainings" data={trainings} />
+            <ExperienceSection />
+            <TrainingSection />
             <SkillsSection />
             <ProjectSection data={projects} />
             <ContactsSection />

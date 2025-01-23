@@ -1,6 +1,6 @@
 'use client'
 import type { FC } from 'react'
-import type { AdditionalProps } from '@type/common'
+import type { AdditionalProps } from '@type/common.type'
 
 import { useState, useEffect, useRef } from 'react'
 import useActiveNavigation from '@store/active-navigation'

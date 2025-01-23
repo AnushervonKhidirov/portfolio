@@ -1,4 +1,4 @@
-import type { TNavigationItem } from '@type/navigation'
+import type { TNavigationItem } from '@type/navigation.type'
 
 export const navigationList: TNavigationItem[] = [
     {

@@ -1,6 +1,6 @@
 import type { FC } from 'react'
-import type { AdditionalProps } from '@type/common'
-import type { TNavigationList } from '@type/navigation'
+import type { AdditionalProps } from '@type/common.type'
+import type { TNavigationList } from '@type/navigation.type'
 
 import NavigationButton from '../navigation-button/navigation-button'
 

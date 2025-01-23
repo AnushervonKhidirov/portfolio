@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import type { TOrganization, THeadline } from '@type/organization'
+import type { TCompany, TCompanyHeadline } from '@type/companies.type'
 
 import Link from 'next/link'
 import Tooltip from '@common/tooltip/tooltip'
@@ -8,28 +8,35 @@ import About from '@common/about/about'
 import { ColumnList, RowList } from '@common/list/list'
 
 import classNames from 'classnames'
-import classes from './organization.module.css'
+import classes from './company.module.css'
+import { TDateRange } from '@type/common.type'
 
-const Organization: FC<TOrganization> = organization => {
+const Company: FC<TCompany> = company => {
     return (
-        <div className={classes.organization}>
+        <div className={classes.company}>
             <Headline
-                name={organization.name}
-                link={organization.link}
-                position={organization.position}
-                dates={organization.dates}
-                country={organization.country}
+                name={company.name}
+                link={company.link}
+                position={company.position}
+                country={company.country}
+                startDate={company.startDate}
+                endDate={company.endDate}
             />
 
-            {organization.about && <About about={organization.about} />}
-            <ColumnList title="Tasks" list={organization.tasks} />
-            {organization.achievement && <ColumnList title="Achievements" list={organization.achievement} />}
-            <RowList title="Stack" list={organization.stack} highlight />
+            {company.about && <About about={company.about} />}
+            <ColumnList title="Tasks" list={company.tasks} />
+            {company.achievements && <ColumnList title="Achievements" list={company.achievements} />}
+            <RowList title="Stack" list={company.stacks} highlight />
         </div>
     )
 }
 
-const Headline: FC<THeadline> = ({ name, link, country, position, dates }) => {
+const Headline: FC<TCompanyHeadline> = ({ name, link, country, position, startDate, endDate }) => {
+    const dates: TDateRange = {
+        from: startDate,
+        to: endDate,
+    }
+
     return (
         <div className={classes.headline}>
             <h4>
@@ -50,4 +57,4 @@ const Headline: FC<THeadline> = ({ name, link, country, position, dates }) => {
     )
 }
 
-export default Organization
+export default Company

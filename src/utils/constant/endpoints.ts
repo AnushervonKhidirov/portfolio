@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const endpoint = 'http://localhost:4000'
 
 export enum Endpoint {
@@ -11,4 +12,6 @@ export enum Endpoint {
     Skill = `${endpoint}/skills/[id]`,
     Skills = `${endpoint}/skills`,
     SkillsAvailable = `${endpoint}/skills/all`,
+    Companies = `${endpoint}/companies`,
+    Company = `${endpoint}/companies[id]`,
 }
