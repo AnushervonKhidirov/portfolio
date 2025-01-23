@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 export enum Skill {
     HTML = 'HTML',
     CSS = 'CSS',
