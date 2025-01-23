@@ -13,4 +13,5 @@ export enum Endpoint {
     Company = 'http://localhost:4000/companies[id]',
     Projects = 'http://localhost:4000/projects',
     Project = 'http://localhost:4000/projects[id]',
+    Mail = 'http://localhost:4000/email',
 }
