@@ -1,25 +1,20 @@
 import type { FC } from 'react'
-import type { TProject } from '@type/projects'
+import type { TProject } from '@type/projects.type'
 
-import Image from 'next/image'
 import SocialLinks from '@common/social-links/social-links'
 import { RowList } from '@common/list/list'
 
 import classes from './project.module.css'
 
-const Project: FC<TProject> = ({ name, image, stack, links }) => {
+const Project: FC<Omit<TProject, 'id'>> = ({ title, imageUrl, stacks, links }) => {
     return (
         <div className={classes.project}>
-            <Image src={image.src} width={image.width} height={image.height} alt={name} />
+            <img src={imageUrl} alt={title} />
 
             <div className={classes.project_info}>
-                <h4>{name}</h4>
+                <h4>{title}</h4>
                 {links && <SocialLinks socialLinks={links} />}
-                <RowList
-                    title="Stack"
-                    list={stack.map(stack => ({ id: Math.random().toString(), value: stack }))}
-                    highlight
-                />
+                <RowList title="Stack" list={stacks} highlight />
             </div>
         </div>
     )

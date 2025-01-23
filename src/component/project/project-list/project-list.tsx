@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import type { AdditionalProps } from '@type/common.type'
-import type { TProjectList } from '@type/projects'
+import type { TProjectList } from '@type/projects.type'
 
 import Project from '../project/project'
 
@@ -13,11 +13,11 @@ const ProjectList: FC<AdditionalProps<TProjectList>> = ({ list, className }) => 
             {list.map(project => {
                 return (
                     <Project
-                        name={project.name}
-                        image={project.image}
-                        stack={project.stack}
+                        title={project.title}
+                        imageUrl={project.imageUrl}
+                        stacks={project.stacks}
                         links={project.links}
-                        key={project.name}
+                        key={project.id}
                     />
                 )
             })}
