@@ -13,7 +13,7 @@ const SkillList: FC<AdditionalProps<TSkillGroup>> = ({ headline, skills, classNa
             <h4 className={classes.skill_headline}>{headline}</h4>
             <div className={classes.skill_list}>
                 {skills.map(skill => {
-                    return <SkillBar name={skill.name} progress={skill.progress} key={skill.id} />
+                    return <SkillBar skill={skill} key={skill.id} />
                 })}
             </div>
         </div>

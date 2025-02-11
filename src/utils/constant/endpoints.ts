@@ -1,4 +1,7 @@
 export enum Endpoint {
+    Skill = 'http://localhost:4000/acquired-skills/[id]',
+    Skills = 'http://localhost:4000/acquired-skills',
+    
     UserInfo = 'http://localhost:4000/user',
     Positions = 'http://localhost:4000/positions',
     Position = 'http://localhost:4000/positions/[id]',
@@ -6,9 +9,6 @@ export enum Endpoint {
     Grade = 'http://localhost:4000/grades/[id]',
     SocialLinks = 'http://localhost:4000/social-links',
     Contacts = 'http://localhost:4000/contacts',
-    Skill = 'http://localhost:4000/skills/[id]',
-    Skills = 'http://localhost:4000/skills',
-    SkillsAvailable = 'http://localhost:4000/skills/all',
     Companies = 'http://localhost:4000/companies',
     Company = 'http://localhost:4000/companies[id]',
     Projects = 'http://localhost:4000/projects',

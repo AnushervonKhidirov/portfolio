@@ -1,58 +1,43 @@
-import type { TSkill, TSkillGroup, TAvailableSkill } from '@type/skill.type'
+import type { AxiosError } from 'axios'
+import type { TAcquiredSkill, TSkillGroup } from '@type/skill.type'
+import type { TResponseError } from '@type/errors'
 
 import axios from 'axios'
 
+import { ResponseError } from './errors'
 import { Endpoint } from '@constant/endpoints'
 
 export class Skills {
-    async findAll(): Promise<TSkill[] | null> {
+    async findAll() {
         try {
-            const response = await axios.get<TSkill[]>(Endpoint.Skills)
+            const response = await axios.get<TAcquiredSkill[]>(Endpoint.Skills)
 
-            if (response.status !== 200 || !response.data) throw new Error('Unable to get skills')
-
-            return response.data
+            if (response.status !== 200) throw new Error()
+            return response.data.sort((a, b) => b.progress - a.progress)
         } catch (err) {
-            console.log(err)
+            const error = err as AxiosError<TResponseError>
+            return new ResponseError(error?.response?.data)
         }
-
-        return null
     }
 
-    async findOne(id: string): Promise<TSkill | null> {
+    async findOne(id: string) {
         try {
-            const response = await axios.get<TSkill>(Endpoint.Skill.replace('[id]', id))
+            const response = await axios.get<TAcquiredSkill>(Endpoint.Skill.replace('[id]', id))
 
-            if (response.status !== 200 || !response.data) throw new Error('Unable to get skill')
-
+            if (response.status !== 200) throw new Error()
             return response.data
         } catch (err) {
-            console.log(err)
+            const error = err as AxiosError<TResponseError>
+            return new ResponseError(error?.response?.data)
         }
-
-        return null
     }
 
-    async findAllAvailableSkills(): Promise<TAvailableSkill[] | null> {
-        try {
-            const response = await axios.get<TAvailableSkill[]>(Endpoint.SkillsAvailable)
-
-            if (response.status !== 200 || !response.data) throw new Error('Unable to get available skills')
-
-            return response.data
-        } catch (err) {
-            console.log(err)
-        }
-
-        return null
-    }
-
-    groupSkills(skills: TSkill[]) {
-        const skillGroups: { [key: string]: TSkill[] } = {}
+    groupSkills(skills: TAcquiredSkill[]) {
+        const skillGroups: { [key: string]: TAcquiredSkill[] } = {}
 
         skills.forEach(skill => {
-            if (!skillGroups[skill.type]) skillGroups[skill.type] = []
-            skillGroups[skill.type].push(skill)
+            if (!skillGroups[skill.skillType]) skillGroups[skill.skillType] = []
+            skillGroups[skill.skillType].push(skill)
         })
 
         const groupKeys = Object.keys(skillGroups)

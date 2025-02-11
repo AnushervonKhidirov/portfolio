@@ -4,6 +4,7 @@ import type { TSkillGroup } from '@type/skill.type'
 import { useState, useEffect } from 'react'
 
 import { Skills } from '@services/skills'
+import { ResponseError } from '@services/errors'
 
 import Section from '@common/section/section'
 import SkillList from '@component/skill/skill-list/skill-list'
@@ -16,7 +17,7 @@ const SkillsSection = () => {
 
     async function collectSkills() {
         const skillList = await skills.findAll()
-        if (!skillList) return
+        if (skillList instanceof ResponseError) return
 
         const groupedSkills = skills.groupSkills(skillList)
         setGroupedSkills(groupedSkills)

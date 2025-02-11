@@ -1,16 +1,18 @@
 export type TSkill = {
     id: string
     name: string
+    createdAt: Date
+}
+
+export type TAcquiredSkill = {
+    id: string
     progress: number
-    type: string
+    skillType: string
+    skill: TSkill
+    createdAt: string
 }
 
 export type TSkillGroup = {
     headline: string
-    skills: TSkill[]
-}
-
-export type TAvailableSkill = {
-    id: string
-    value: string
+    skills: TAcquiredSkill[]
 }
