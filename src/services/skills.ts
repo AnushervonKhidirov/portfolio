@@ -1,6 +1,6 @@
 import type { AxiosError } from 'axios'
 import type { TAcquiredSkill, TSkillGroup } from '@type/skill.type'
-import type { TResponseError } from '@type/errors'
+import type { TResponseError } from '@type/errors.type'
 
 import axios from 'axios'
 
