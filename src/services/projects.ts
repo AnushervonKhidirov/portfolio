@@ -1,8 +1,11 @@
-import { TProject } from '@type/projects.type'
+import type { AxiosError } from 'axios'
+import type { TProject } from '@type/projects.type'
+import type { TResponseError } from '@type/errors.type'
 
 import axios from 'axios'
 
-import { Endpoint } from '@constant/endpoints'
+import { ResponseError } from './errors'
+import { Endpoint, Host } from '@constant/endpoints'
 
 export class Projects {
     async findAll() {
@@ -11,12 +14,16 @@ export class Projects {
 
             if (response.status !== 200 || !response.data) throw new Error('Unable to get projects')
 
-            return response.data
-        } catch (err) {
-            console.log(err)
-        }
+            const updatedData: TProject[] = response.data.map(project => ({
+                ...project,
+                image: `${Host}${project.image}`,
+            }))
 
-        return null
+            return updatedData
+        } catch (err) {
+            const error = err as AxiosError<TResponseError>
+            return new ResponseError(error?.response?.data)
+        }
     }
 
     async findOne(id: string) {
@@ -25,11 +32,11 @@ export class Projects {
 
             if (response.status !== 200 || !response.data) throw new Error('Unable to get project')
 
-            return response.data
+            const updatedData: TProject = { ...response.data, image: `${Host}${response.data.image}` }
+            return updatedData
         } catch (err) {
-            console.log(err)
+            const error = err as AxiosError<TResponseError>
+            return new ResponseError(error?.response?.data)
         }
-
-        return null
     }
 }

@@ -1,12 +1,13 @@
-import type { TSocialLink } from './social-links.type'
-import type { TIdValueObject } from './common.type'
+import type { TSkill } from './skill.type'
+import type { TLink } from './common.type'
 
 export type TProject = {
     id: string
     title: string
-    imageUrl: string
-    stacks: TIdValueObject<string>[]
-    links?: TSocialLink[]
+    image: string
+    stack: TSkill[]
+    links: TLink[]
+    createdAt: string
 }
 
 export type TProjectList = {

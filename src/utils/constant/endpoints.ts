@@ -1,17 +1,19 @@
+export const Host = 'http://localhost:4000'
+
 export enum Endpoint {
-    Skill = 'http://localhost:4000/acquired-skills/[id]',
-    Skills = 'http://localhost:4000/acquired-skills',
-    
-    UserInfo = 'http://localhost:4000/user',
-    Positions = 'http://localhost:4000/positions',
-    Position = 'http://localhost:4000/positions/[id]',
-    Grades = 'http://localhost:4000/grades',
-    Grade = 'http://localhost:4000/grades/[id]',
-    SocialLinks = 'http://localhost:4000/social-links',
-    Contacts = 'http://localhost:4000/contacts',
-    Companies = 'http://localhost:4000/companies',
-    Company = 'http://localhost:4000/companies[id]',
-    Projects = 'http://localhost:4000/projects',
-    Project = 'http://localhost:4000/projects[id]',
-    Mail = 'http://localhost:4000/email',
+    Skill = `${Host}/acquired-skills/[id]`,
+    Skills = `${Host}/acquired-skills`,
+
+    UserInfo = `${Host}/user`,
+    Positions = `${Host}/positions`,
+    Position = `${Host}/positions/[id]`,
+    Grades = `${Host}/grades`,
+    Grade = `${Host}/grades/[id]`,
+    SocialLinks = `${Host}/social-links`,
+    Contacts = `${Host}/contacts`,
+    Companies = `${Host}/companies`,
+    Company = `${Host}/companies[id]`,
+    Projects = `${Host}/projects`,
+    Project = `${Host}/projects[id]`,
+    Mail = `${Host}/email`,
 }

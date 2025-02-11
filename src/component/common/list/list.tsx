@@ -15,8 +15,8 @@ export const ColumnList: FC<AdditionalProps<TList>> = ({ title, list, className 
             <span>{title}:</span>
 
             <ul className={classes.list}>
-                {list.map(({ id, value }) => (
-                    <li key={id}>{value}</li>
+                {list.map(({ id, name }) => (
+                    <li key={id}>{name}</li>
                 ))}
             </ul>
         </div>
@@ -29,7 +29,7 @@ export const RowList: FC<AdditionalProps<TList & { highlight?: boolean }>> = ({
     highlight,
     className,
 }) => {
-    const listValues = list.map(item => item.value)
+    const listValues = list.map(item => item.name)
 
     return (
         <div className={classNames(classes.list_wrapper, classes.row_list, className)}>

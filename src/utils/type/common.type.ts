@@ -10,9 +10,16 @@ export type TDateRange = {
     to?: number | null
 }
 
+export type TLink = {
+    id: string
+    title: string
+    href: string
+    createdAt: string
+}
+
 export type TIdValueObject<T = unknown> = {
     id: string
-    value: T
+    name: T
 }
 
 export type TQuery = { [key: string]: string | number }

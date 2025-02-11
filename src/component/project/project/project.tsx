@@ -6,15 +6,15 @@ import { RowList } from '@common/list/list'
 
 import classes from './project.module.css'
 
-const Project: FC<Omit<TProject, 'id'>> = ({ title, imageUrl, stacks, links }) => {
+const Project: FC<{ project: TProject }> = ({ project }) => {
     return (
         <div className={classes.project}>
-            <img src={imageUrl} alt={title} />
+            <img src={project.image} alt={project.title} />
 
             <div className={classes.project_info}>
-                <h4>{title}</h4>
-                {links && <SocialLinks socialLinks={links} />}
-                <RowList title="Stack" list={stacks} highlight />
+                <h4>{project.title}</h4>
+                {project.links && <SocialLinks socialLinks={project.links} />}
+                <RowList title="Stack" list={project.stack} highlight />
             </div>
         </div>
     )

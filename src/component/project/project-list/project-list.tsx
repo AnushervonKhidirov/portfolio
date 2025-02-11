@@ -11,15 +11,7 @@ const ProjectList: FC<AdditionalProps<TProjectList>> = ({ list, className }) => 
     return (
         <div className={classNames(classes.project_list, className)}>
             {list.map(project => {
-                return (
-                    <Project
-                        title={project.title}
-                        imageUrl={project.imageUrl}
-                        stacks={project.stacks}
-                        links={project.links}
-                        key={project.id}
-                    />
-                )
+                return <Project project={project} key={project.id} />
             })}
         </div>
     )
