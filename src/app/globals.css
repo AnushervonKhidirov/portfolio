@@ -4,6 +4,10 @@
     --tertiary: #cb7096;
     --primaryLight: #302e46;
 
+    --error-color: #ad1b1b;
+    --warning-color: #d98246;
+    --success-color: #279329;
+
     --padding-inline: 7rem;
 
     --thin-line-vide: 1px;
@@ -18,12 +22,12 @@
 }
 
 * {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    scroll-behavior: smooth;
 }
 
 body {
