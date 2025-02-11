@@ -1,0 +1,39 @@
+.alert_bg {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.alert_container {
+    --padding: 1rem;
+    display: grid;
+    width: 40vw;
+    background-color: var(--primaryLight);
+    border-radius: var(--border-radius-medium);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: var(--padding);
+}
+
+.header.success_color {
+    background-color: var(--success-color);
+}
+
+.header.warning_color {
+    background-color: var(--warning-color);
+}
+
+.header.error_color {
+    background-color: var(--error-color);
+}
+
+.info {
+    padding: 2rem var(--padding);
+}
