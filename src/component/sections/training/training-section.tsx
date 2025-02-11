@@ -17,7 +17,7 @@ const TrainingSection = () => {
     const [error, setError] = useState<ResponseError | null>(null)
 
     async function getTrainings() {
-        const trainings = await companies.findAll({ type: 'training' })
+        const trainings = await companies.findAll({ activity: 'training' })
 
         if (trainings instanceof ResponseError) {
             setError(trainings)
