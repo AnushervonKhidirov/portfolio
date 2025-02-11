@@ -12,7 +12,7 @@ export class Projects {
         try {
             const response = await axios.get<TProject[]>(Endpoint.Projects)
 
-            if (response.status !== 200 || !response.data) throw new Error('Unable to get projects')
+            if (response.status !== 200 || !response.data) throw new Error()
 
             const updatedData: TProject[] = response.data.map(project => ({
                 ...project,
@@ -30,7 +30,7 @@ export class Projects {
         try {
             const response = await axios.get<TProject>(Endpoint.Project.replace('[id]', id))
 
-            if (response.status !== 200 || !response.data) throw new Error('Unable to get project')
+            if (response.status !== 200 || !response.data) throw new Error()
 
             const updatedData: TProject = { ...response.data, image: `${Host}${response.data.image}` }
             return updatedData
