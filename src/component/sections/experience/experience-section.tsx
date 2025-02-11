@@ -18,6 +18,7 @@ const ExperienceSection = () => {
 
     async function getExperiences() {
         const experiences = await companies.findAll({ activity: 'experience' })
+
         if (experiences instanceof ResponseError) {
             setError(experiences)
             return
@@ -33,7 +34,8 @@ const ExperienceSection = () => {
 
     if (error) return <Alert type="error" header={error.error} message={error.message} />
     return (
-        experiences && (
+        experiences &&
+        experiences.length > 0 && (
             <Section title="Experiences" headline>
                 <CompanyList list={experiences} />
             </Section>
