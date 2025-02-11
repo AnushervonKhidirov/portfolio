@@ -6,8 +6,8 @@ export type AdditionalProps<T = object> = T &
     }
 
 export type TDateRange = {
-    from: number
-    to?: number | null
+    from: number | string
+    to?: number | string | null
 }
 
 export type TLink = {

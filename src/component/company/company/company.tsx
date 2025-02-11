@@ -1,13 +1,10 @@
 import type { FC } from 'react'
 import type { TCompany, TCompanyHeadline } from '@type/companies.type'
 
-import Link from 'next/link'
-import Tooltip from '@common/tooltip/tooltip'
 import DateRange from '@common/date-range/date-range'
 import About from '@common/about/about'
 import { ColumnList, RowList } from '@common/list/list'
 
-import classNames from 'classnames'
 import classes from './company.module.css'
 import { TDateRange } from '@type/common.type'
 
@@ -16,41 +13,32 @@ const Company: FC<TCompany> = company => {
         <div className={classes.company}>
             <Headline
                 name={company.name}
-                link={company.link}
                 position={company.position}
                 country={company.country}
-                startDate={company.startDate}
-                endDate={company.endDate}
+                startAt={company.startAt}
+                endAt={company.endAt}
             />
 
             {company.about && <About about={company.about} />}
             <ColumnList title="Tasks" list={company.tasks} />
-            {company.achievements && <ColumnList title="Achievements" list={company.achievements} />}
-            <RowList title="Stack" list={company.stacks} highlight />
+            <ColumnList title="Achievements" list={company.achievements} />
+            <RowList title="Stack" list={company.stack} highlight />
         </div>
     )
 }
 
-const Headline: FC<TCompanyHeadline> = ({ name, link, country, position, startDate, endDate }) => {
+const Headline: FC<TCompanyHeadline> = ({ name, country, position, startAt, endAt }) => {
     const dates: TDateRange = {
-        from: startDate,
-        to: endDate,
+        from: startAt,
+        to: endAt,
     }
 
     return (
         <div className={classes.headline}>
             <h4>
-                {link ? (
-                    <Tooltip title={`Visit ${name}`}>
-                        <Link href={link} target="_blank" className={classNames(classes.name, classes.link)}>
-                            {name}
-                        </Link>
-                    </Tooltip>
-                ) : (
-                    <span className={classes.name}>{name}</span>
-                )}
+                <span className={classes.name}>{name}</span>
                 {country && <span className={classes.country}>, {country}</span>}
-                <i className={classes.position}> - {position}</i>
+                <i className={classes.position}> - {position.name}</i>
             </h4>
             <DateRange dates={dates} />
         </div>

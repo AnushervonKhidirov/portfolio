@@ -1,18 +1,42 @@
-import { TIdValueObject } from './common.type'
+import type { TSkill } from './skill.type'
+
+export type TTask = {
+    id: string
+    name: string
+    createdAt: Date
+}
+
+export type TAchievement = {
+    id: string
+    name: string
+    createdAt: Date
+}
+
+export type TPosition = {
+    id: string
+    name: string
+    createdAt: Date
+}
+
+export type TGrade = {
+    id: string
+    name: string
+    createdAt: Date
+}
 
 export type TCompany = {
     id: string
     name: string
-    link?: string
     country?: string
-    position: string
-    startDate: number
-    endDate?: number
+    grade: TGrade
+    position: TPosition
+    startAt: string
+    endAt?: string
     about?: string
-    tasks: TIdValueObject<string>[]
-    achievements?: TIdValueObject<string>[]
-    stacks: TIdValueObject<string>[]
-    type: string
+    tasks: TTask[]
+    achievements: TAchievement[]
+    stack: TSkill[]
+    activity: string
 }
 
-export type TCompanyHeadline = Omit<TCompany, 'about' | 'tasks' | 'achievements' | 'stacks' | 'type' | 'id'>
+export type TCompanyHeadline = Pick<TCompany, 'name' | 'position' | 'country' | 'startAt' | 'endAt'>
