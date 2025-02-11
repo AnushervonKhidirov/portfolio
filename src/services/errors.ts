@@ -1,13 +1,13 @@
-import type { TResponseError } from '@type/errors'
+import type { TResponseError } from '@type/errors.type'
 
 export class ResponseError {
-    message: string
+    message: string | string[]
     statusCode: number
-    error?: string
+    error: string
 
     constructor(err: Partial<TResponseError> | undefined) {
-        this.message = err?.message ?? 'Bad request'
+        this.message = err?.message ?? 'Something went wrong, please try again later!'
         this.statusCode = err?.statusCode ?? 400
-        this.error = err?.error
+        this.error = err?.error ?? 'Bad request'
     }
 }
